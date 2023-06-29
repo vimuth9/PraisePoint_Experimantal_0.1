@@ -1,6 +1,6 @@
 File Nameing System
 
- 00000_S_KM_ SongNameE_ SongNameS_L.html
+ 00000_S_KM_ SongNameE_ SongNameS_ L.html
 
 '''''''''''''''''''
 
@@ -15,6 +15,6 @@ L         - Language available ( S - Sinhala, E - English, T - Tamil )
 
 eg:-
 
- 00001_S_EM_ Galawumkaru-Meedumkaru_ ගැලවුම්කරු-මිදුම්කරු_ SE
+ 00001_S_EM_ Galawumkaru-Meedumkaru_ ගැලවුම්කරු-මිදුම්කරු_ SE.html
 
 '''''''''''''''''''
