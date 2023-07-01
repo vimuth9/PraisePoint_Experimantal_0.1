@@ -7,12 +7,15 @@
 
   <!--Change This in every song -->
   <title>SongNameS_ SongNameE_ | PraisePoint</title>
-  <meta name="description" content="Chords and Lyrics for 'SongNameS' ">
+  <meta name="description" content="Chords and Lyrics for ' SongNameS '( SongNameE ) ">
+  
+  
+  <link rel="shortcut icon" href="../images/01_ favicon-logo.png" type="image/x-icon">
 
-  <!--Bootstrap CSS-->
-  <link href="../CSS/style.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <!--CSS files here-->
   <link href="../CSS/style.css" rel="stylesheet">
+  <!--JS Files here-->
+  <script src="../JS/03_SongDetail.JS"></script>
 </head>
 
 <body class="bg-slate-700">
@@ -33,49 +36,63 @@
       </div>
       <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
         <dt class="text-cyan-400">Orginal Key</dt>
-        <dd id="OrginalKey" class="text-white sm:col-span-2 sm:mt-0">Orginal song Key - missing</dd>
+        <dd id="orginalKey" class="text-white sm:col-span-2 sm:mt-0">Orginal song Key - missing</dd>
       </div>
       <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-        <dt class="inline-flex text-cyan-400">
-          Tempo<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 hover:text-cyan-300">
+        <dt class="inline-flex text-cyan-400">Tempo<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 hover:text-cyan-300">
             <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
           </svg>
         </dt>
-        <dd id="" class="text-white sm:col-span-2 sm:mt-0">
+        <dd class="text-white sm:col-span-2 sm:mt-0">
           <div class="columns-2">
             <div><span id="BPM">--</span> bpm</div>
-            <div id="tempoTag" class="">-Comming soon</div>
+            <div id="tempoTag" class="">Tempo tags - Comming soon</div>
           </div>
         </dd>
       </div>
       <div class="hidden border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
         <dt class="text-cyan-400">Theme</dt>
-        <dd id="OrginalKey" class="text-white sm:col-span-2 sm:mt-0">Theme Tags - Comming soon</dd>
+        <dd id="themeTag" class="text-white sm:col-span-2 sm:mt-0">Theme Tags - Comming soon</dd>
       </div>
       <div class="hidden border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
         <dt class="text-cyan-400">Language (Orginal song)</dt>
-        <dd id="OrginalKey" class="text-white sm:col-span-2 sm:mt-0">Language missing</dd>
+        <dd id="oLanguage" class="text-white sm:col-span-2 sm:mt-0">Language missing</dd>
       </div>
       <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
         <dt class="text-cyan-400">Translator</dt>
-        <dd id="OrginalKey" class="text-white sm:col-span-2 sm:mt-0">Song Translator name - missing</dd>
+        <dd id="translator" class="text-white sm:col-span-2 sm:mt-0">Song Translator name - missing</dd>
       </div>
       <div class="hidden border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
         <dt class="text-cyan-400">Translate Language</dt>
-        <dd id="OrginalKey" class="text-white sm:col-span-2 sm:mt-0">Orginal song Key - missing</dd>
+        <dd id="tLanguage" class="text-white sm:col-span-2 sm:mt-0">Orginal song Key - missing</dd>
       </div>
       <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
         <dt class="text-cyan-400">Available Language</dt>
-        <dd id="OrginalKey" class="text-white sm:col-span-2 sm:mt-0">Orginal song Key - missing</dd>
+        <dd id="aLanguage" class="text-white sm:col-span-2 sm:mt-0">Orginal song Key - missing</dd>
       </div>
     </div>
   </div>
 </div>
+<!-- Chords and Lyrics application container-->
+<div class="container mx-auto h-screen max-w-7xl bg-gray-800 p-6">
+  <div>Chords
+
+  </div>
+</div>
 
 <script>
-  let _orginalSongName = "" ;
-  let _orginalSongWriterName = "" ;
-  var OrginalKey = ""
+  let _orginalSongName = "ගැලවුම්කරු මිදුම්කරු - දෙවිදුන් මා එසෙව්වා " ;
+  let _orginalSongWriterName = "Vimuth TEster name" ;
+  var _orginalKey = "E" ;
+  let _BPM = 120 ;
+  // var _tempoTag = , id= tempoTag
+  // var _themeTag = , id= themeTag
+  // var _oLanguage = , id= oLanguage
+  // var _translator = , id= translator
+  // var _tLanguage = , id= tLanguage
+  // var _aLanguage = , id= aLanguage
+
+  testerA ()
 </script>
 
 </body>
