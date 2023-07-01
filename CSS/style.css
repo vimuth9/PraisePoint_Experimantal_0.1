@@ -551,8 +551,40 @@ video {
   margin-right: auto;
 }
 
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
 .h-screen {
   height: 100vh;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .max-w-7xl {
@@ -561,6 +593,10 @@ video {
 
 .columns-2 {
   columns: 2;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .rounded-2xl {
@@ -579,6 +615,10 @@ video {
 .bg-slate-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .p-6 {
@@ -619,6 +659,21 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+body {
+  --tw-bg-opacity: 1;
+  background-color: rgb(60, 63, 94);
+}
+
+.hover\:text-cyan-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(103 232 249 / var(--tw-text-opacity));
+}
+
+.hover\:text-cyan-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(6 182 212 / var(--tw-text-opacity));
+}
+
 @media (min-width: 640px) {
   .sm\:col-span-2 {
     grid-column: span 2 / span 2;
@@ -630,6 +685,10 @@ video {
 
   .sm\:grid {
     display: grid;
+  }
+
+  .sm\:hidden {
+    display: none;
   }
 
   .sm\:grid-cols-3 {
@@ -645,4 +704,3 @@ video {
     padding-right: 0px;
   }
 }
-
