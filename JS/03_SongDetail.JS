@@ -1,4 +1,4 @@
-function testerA () {
+function detailA () {
 if (_orginalSongName == "" || _orginalSongName == null) {
     console.log( "_orginalSongName Missing" )
 } else {
@@ -24,4 +24,16 @@ if ( _BPM == "" || _BPM == null) {
 } else {
     document.getElementById("BPM").innerHTML = _BPM ;
 }
+
+
+if ( _BPM < 110 ) {
+    document.getElementById("tSlow").style.display = "flex";  
+}
+if ( _BPM > 150 ) {
+    document.getElementById("tFast").style.display = "flex";  
+}
+if ( _BPM >= 110 && _BPM <= 150 ) {
+    document.getElementById("tMedium").style.display = "flex";  
+}
+
 }
