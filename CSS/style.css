@@ -609,7 +609,7 @@ video {
 
 .border-b {
   border-bottom-width: 1px;
-  border-color: rgba(255, 255, 255, 0.385);
+  border-color: rgb(255, 255, 255);
 }
 
 .bg-gray-800 {
