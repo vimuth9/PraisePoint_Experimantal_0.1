@@ -37,3 +37,10 @@ if ( _BPM >= 110 && _BPM <= 150 ) {
 }
 
 }
+
+function detailB () {
+    document.getElementById("moreInfo").style.transform="rotate(180deg)";
+    
+
+}
+
