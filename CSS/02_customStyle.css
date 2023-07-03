@@ -1,0 +1,9 @@
+.Tooltip_Tempo {
+    display:none;
+}
+
+.inforico:hover {
+    .Tooltip_Tempo {
+        display: block;
+    }
+}

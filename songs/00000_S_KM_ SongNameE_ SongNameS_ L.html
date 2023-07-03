@@ -1,102 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--Change This in every song -->
-    <title>SongNameS_ SongNameE_ | PraisePoint</title>
-    <meta name="description" content="Chords and Lyrics for ' SongNameS '( SongNameE ) " />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="../images/01_ favicon-logo.png" type="image/x-icon" />
+  <!--Change This in every song -->
+  <title>SongNameS_ SongNameE_ | PraisePoint</title>
+  <meta name="description" content="Chords and Lyrics for ' SongNameS '( SongNameE ) " />
 
-    <!--CSS files here-->
-    <link href="../CSS/style.css" rel="stylesheet" />
-    <!--JS Files here-->
-    <script src="../JS/03_SongDetail.JS"></script>
-  </head>
+  <link rel="shortcut icon" href="../images/01_ favicon-logo.png" type="image/x-icon" />
 
-  <body class="bg-slate-700">
-<!--content container-->
-<div class="container mx-auto h-screen max-w-7xl bg-gray-800 p-6">
-  <!--Song Detail box-->
-  <div class="col rounded-2xl bg-slate-700 p-6">
-    <div class="flex w-full justify-between">
-      <h1 id="orginalSongName" class="text-2xl font-bold text-cyan-300 sm:text-4xl sm:px-3">Song Name</h1>
-      <svg role="button" id="moreInfo" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8 p-1 text-cyan-300 hover:text-white sm:hidden">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-      </svg>
-    </div>
-    <div class="detais-box-non-hide">
-      <div  class=" hidden border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-        <dt class="text-cyan-400">Writer</dt>
-        <dd id="orginalSongWriterName" class="text-white sm:col-span-2 sm:mt-0">Unknown</dd>
+  <!--CSS files here-->
+  <link href="../CSS/01_style.css" rel="stylesheet" />
+  <link href="../CSS/02_customStyle.css" rel="stylesheet" />
+
+  <!--JS Files here-->
+  <script src="../JS/03_SongDetail.JS"></script>
+</head>
+
+<body class="bg-slate-700">
+  <!--content container-->
+  <div class="container mx-auto h-screen max-w-7xl bg-gray-800 p-6">
+    <!--Song Detail box-->
+    <div class="col rounded-2xl bg-slate-700 p-6 ">
+      <div class="flex w-full justify-between">
+        <h1 id="orginalSongName" class="text-2xl font-bold text-cyan-300 sm:text-4xl sm:px-3">Song Name</h1>
+        <svg role="button" id="moreInfo" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" class="h-8 w-8 p-1 text-cyan-300 hover:text-white sm:hidden">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>
       </div>
-      <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-        <dt class="text-cyan-400">Orginal Key</dt>
-        <dd id="orginalKey" class="text-white sm:col-span-2 sm:mt-0">--</dd>
-      </div>
-      <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-        <dt class="inline-flex text-cyan-400">
-          Tempo<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" class="h-6 w-6 hover:text-white">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
-          </svg>
-        </dt>
-        <dd class="text-white sm:col-span-2 sm:mt-0">
-          <div class="columns-2">
-            <div><span id="BPM">--</span> bpm</div>
-            <div id="tempoTag">
-              <div id="tFast" class="hidden rounded-md bg-rose-600" style="align-items: center; width: fit-content; padding: 0 7px;">Fast</div>
-              <div id="tMedium" class="hidden rounded-md bg-orange-600" style="align-items: center; width: fit-content; padding: 0 7px;">Medium</div>
-              <div id="tSlow" class="hidden rounded-md bg-green-600" style="align-items: center; width: fit-content; padding: 0 7px;">Slow</div>
+      <div class="detais-box-non-hide">
+        <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt class="text-cyan-400">Writer</dt>
+          <dd id="orginalSongWriterName" class="text-white sm:col-span-2 sm:mt-0">Unknown</dd>
+        </div>
+        <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt class="text-cyan-400">Orginal Key</dt>
+          <dd id="orginalKey" class="text-white sm:col-span-2 sm:mt-0">--</dd>
+        </div>
+        <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt class="inline-flex text-cyan-400">
+            Tempo<svg role="button" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.4"
+              stroke="currentColor" class="inforico h-6 w-6 hover:text-white" :hover>
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+            </svg>
+            <div ><p class="Tooltip_Tempo" style="background-color:white; border-radius: 20px;position: relative; border: none; padding: 10px 20px;top: -20px; color: black;">below 110 bpm = Slow <br>110-150 bpm = Medium <br>above 150 bpm = Fast</p></div>
+          </dt>
+          <dd class="text-white sm:col-span-2 sm:mt-0">
+            <div class="columns-2">
+              <div><span id="BPM">--</span> bpm</div>
+              <div id="tempoTag">
+                <div id="tFast" class="hidden rounded-md bg-rose-600"
+                  style="align-items: center; width: fit-content; padding: 0 7px;">Fast</div>
+                <div id="tMedium" class="hidden rounded-md bg-orange-600"
+                  style="align-items: center; width: fit-content; padding: 0 7px;">Medium</div>
+                <div id="tSlow" class="hidden rounded-md bg-green-600"
+                  style="align-items: center; width: fit-content; padding: 0 7px;">Slow</div>
+              </div>
             </div>
-          </div>
-        </dd>
-      </div>
-      <div  class=" hidden border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-        <dt class="text-cyan-400">Theme</dt>
-        <dd id="themeTag" class="text-white sm:col-span-2 sm:mt-0">Theme Tags - Comming soon</dd>
-      </div>
-      <div  class=" hidden border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-        <dt class="text-cyan-400">Language (Orginal song)</dt>
-        <dd id="oLanguage" class="text-white sm:col-span-2 sm:mt-0">Language missing</dd>
-      </div>
-      <div  class=" hidden border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-        <dt class="text-cyan-400">Translator</dt>
-        <dd id="translator" class="text-white sm:col-span-2 sm:mt-0">Song Translator name - missing</dd>
-      </div>
-      <div  class=" hidden border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-        <dt class="text-cyan-400">Translate Language</dt>
-        <dd id="tLanguage" class="text-white sm:col-span-2 sm:mt-0">Orginal song Key - missing</dd>
-      </div>
-      <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-        <dt class="text-cyan-400">Other available Languages</dt>
-        <dd id="aLanguage" class="text-white sm:col-span-2 sm:mt-0">Orginal song Key - missing</dd>
+          </dd>
+        </div>
+        <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt class="text-cyan-400">Theme</dt>
+          <dd id="themeTag" class="text-white sm:col-span-2 sm:mt-0">Theme Tags - Comming soon</dd>
+        </div>
+        <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt class="text-cyan-400">Language (Orginal song)</dt>
+          <dd id="oLanguage" class="text-white sm:col-span-2 sm:mt-0">-------</dd>
+        </div>
+        <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt class="text-cyan-400">Translator</dt>
+          <dd id="translator" class="text-white sm:col-span-2 sm:mt-0"></dd>
+        </div>
+        <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt class="text-cyan-400">Translate Language</dt>
+          <dd id="tLanguage" class="text-white sm:col-span-2 sm:mt-0">-------</dd>
+        </div>
+        <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt class="text-cyan-400">Other available Languages</dt>
+          <dd id="aLanguage" class="text-white sm:col-span-2 sm:mt-0"> -Not Available- </dd>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- Chords and Lyrics application container-->
-<div class="container mx-auto h-screen max-w-7xl bg-gray-800 p-6">
-  <div>Chords</div>
-</div>
+  <!-- Chords and Lyrics application container-->
+  <div class="container mx-auto h-screen max-w-7xl bg-gray-800 p-6">
+    <div>Chords</div>
+  </div>
 
-<!-- Change the var and let-->
-    <script>
-      let _orginalSongName = "ගැලවුම්කරු මිදුම්කරු - දෙවිදුන් මා එසෙව්වා " ; // id= orginalSongName
-      let _orginalSongWriterName = "Nimesh Fernando" ; // id= orginalSongWriterName
-      var _orginalKey = "E" ; // id= orginalKey
-      let _BPM = 200 ; // id= BPM
-      var _tempoTag ; // Do Not Change This, id= tempoTag
-      // var _themeTag = ; // id= themeTag
-      // var _oLanguage = ; // id= oLanguage
-      // var _translator = ; // id= translator
-      // var _tLanguage = ; // id= tLanguage
-      // var _aLanguage = ; // id= aLanguage
-      document.getElementById("moreInfo").addEventListener("click", detailB );
-      detailA ()
+  <!-- Change the var and let-->
+  <script>
+    let _orginalSongName = "ගැලවුම්කරු මිදුම්කරු - දෙවිදුන් මා එසෙව්වා "; // id= orginalSongName
+    let _orginalSongWriterName = "Nimesh Fernando"; // id= orginalSongWriterName
+    var _orginalKey = "E"; // id= orginalKey
+    let _BPM = 200; // id= BPM
+    // var _themeTag = ; // id= themeTag
+    let _oLanguage = "Sinhala"; // id= oLanguage
+    var _translator = "" ; // id= translator
+    var _tLanguage = "" ; // id= tLanguage
+    // var _aLanguage = ; // id= aLanguage
+    var _tempoTag; // Do Not Change This, id= tempoTag
+    detailA()
+    document.getElementById("moreInfo").addEventListener("click", detailB);
+  </script>
 
+  <php>
 
-    </script>
-  </body>
+  </php>
+</body>
+
 </html>
