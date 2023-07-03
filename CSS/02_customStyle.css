@@ -9,14 +9,6 @@
     
 }
 
-.infoico:hover {
-    .Tooltip_Tempo {
-        ::before
-    display: block;
-    }
-}
-
-
 .tooltip {
     position: relative;
     display: inline-block;
