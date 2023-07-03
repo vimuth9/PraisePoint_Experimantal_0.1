@@ -9,25 +9,33 @@
     
 }
 
-#Tooltip_Tempo {
-    box-sizing: border-box;
-    background-color:rgba(255, 255, 255, 0.82);
-    border-radius: 20px;
-    border: none;
-    padding: 10px 20px;
-    margin: 0;
-    position: relative;
-    top: -40px;
-    left: 25px;
-    color: black;
-    text-align: center;
-    z-index: 1000;
+.infoico:hover {
+    .Tooltip_Tempo {
+        ::before
     display: block;
-    width: 215px;
-}
-
-#infoico:hover {
-    #Tooltip_Tempo {
-    display: none;
     }
 }
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+    color: #292929;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
