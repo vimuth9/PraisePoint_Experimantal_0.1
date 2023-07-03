@@ -71,5 +71,5 @@ document.getElementById("translator_details").style.display = "none";
 function detailB() {
     document.getElementById("moreInfo").style.transform = "rotate(180deg)";
     document.getElementByID("mobile_more_info1").style.display="none";
-    document.getElementByID("mobile_more_info2").style.display="none ;
+    document.getElementByID("mobile_more_info2").style.display="none" ;
 }
