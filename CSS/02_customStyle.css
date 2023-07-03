@@ -1,3 +1,14 @@
+#mobile_more_info1 {
+    display: none;
+}
+#mobile_more_info2 {
+    display: none;
+}
+#translator_details {
+    display: none;
+    
+}
+
 .Tooltip_Tempo {
     display:none;
 }
