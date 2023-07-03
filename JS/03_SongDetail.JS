@@ -59,15 +59,17 @@ function detailA() {
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~ JS to hide infor about Translation if the song has no translation avaailable~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 function noTranslator() {
     if( _noTranslation = true ) {
 document.getElementById("translator_details").style.display = "none";
     }
 }
+
 //~~~~~~~~~~~~~~~~~~~~~~~ JS to show more infor about the song in mobile view ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 function detailB() {
     document.getElementById("moreInfo").style.transform = "rotate(180deg)";
     document.getElementByID("mobile_more_info1").style.display="none";
-    document.getElementByID("mobile_more_info2").style.display="none;
+    document.getElementByID("mobile_more_info2").style.display="none ;
 }
