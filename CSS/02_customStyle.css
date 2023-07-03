@@ -9,12 +9,25 @@
     
 }
 
-.Tooltip_Tempo {
-    display:none;
+#Tooltip_Tempo {
+    box-sizing: border-box;
+    background-color:rgba(255, 255, 255, 0.82);
+    border-radius: 20px;
+    border: none;
+    padding: 10px 20px;
+    margin: 0;
+    position: relative;
+    top: -40px;
+    left: 25px;
+    color: black;
+    text-align: center;
+    z-index: 1000;
+    display: block;
+    width: 215px;
 }
 
-.inforico:hover {
-    .Tooltip_Tempo {
-        display: block;
+#infoico:hover {
+    #Tooltip_Tempo {
+    display: none;
     }
 }
