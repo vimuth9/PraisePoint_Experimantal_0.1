@@ -8,7 +8,10 @@
     display: none;
     
 }
-
+.infoico {
+    width: 20px;
+    height: 20px;
+}
 .tooltip {
     position: relative;
     display: inline-block;
