@@ -61,34 +61,47 @@ function detailA() {
 
 //~~~~~~~~~~~~~~~~~~~~~~~ JS to hide infor about Translation if the song has no translation avaailable~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-function noTranslator() {
+function noTranslator(_noTranslation) {
     if (_noTranslation = true) {
         document.getElementById("translator_details").style.display = "none";
+        console.log("this song is not a translation this is a orginal song")
     }
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~ JS to show more infor about the song in mobile view ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-function detailB() {
+function detailB(_noTranslation) {
     var moreInfo = document.getElementById("moreInfo");
     var mobileMoreInfo1 = document.getElementById("mobile_more_info1");
     var mobileMoreInfo2 = document.getElementById("mobile_more_info2");
-
-    if (mobileMoreInfo1.style.display === "none" || mobileMoreInfo2.style.display === "none") {
+    if (mobileMoreInfo1.style.display == "none" || mobileMoreInfo2.style.display == "none") {
         moreInfo.style.transform = "rotate(180deg)";
         mobileMoreInfo1.style.display = "grid";
         mobileMoreInfo2.style.display = "grid";
-        if (_noTranslation = false) {
-            document.getElementById("translator_details").style.display = "grid";
-        }
+        desitionTranslatorShow();
+        console.log("show / expands all the unwanted details about the song");
     } else {
         moreInfo.style.transform = "rotate(0deg)";
         mobileMoreInfo1.style.display = "none";
         mobileMoreInfo2.style.display = "none";
-        if (_noTranslation = false) {
-            document.getElementById("translator_details").style.display = "none";
-        }
+        desitionTranslatorHide();
+        console.log("hides /collaps all the unwanted details about the song");
 
+
+    }
+}
+
+function desitionTranslatorShow() {
+    if (_noTranslation === false) {
+        translator_details.style.display = "grid";
+        console.log("expand succeed -this a translation of a another song which is composed by the writer");
+    }
+}
+
+function desitionTranslatorHide() {
+    if (_noTranslation === false) {
+        translator_details.style.display = "none";
+        console.log("collaps succeed-this a translation of a another song which is composed by the writer");
 
     }
 }
