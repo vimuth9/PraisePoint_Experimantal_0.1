@@ -717,5 +717,9 @@ video {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
-
+  .active\:bg-cyan-700:active {
+    --tw-bg-opacity: 1;
+    background-color: rgb(14 116 144 / var(--tw-bg-opacity));
+  }
+    
 }
