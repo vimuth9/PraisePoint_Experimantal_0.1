@@ -33,7 +33,7 @@
         </svg>
       </div>
 
-      <div id="mobile_more_info1" class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+      <div id="mobile_more_info1" style="display: none;" class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
         <dt class="text-cyan-400">Writer</dt>
         <dd id="orginalSongWriterName" class="text-white sm:col-span-2 sm:mt-0">Unknown</dd>
       </div>
@@ -71,7 +71,7 @@
           </div>
         </dd>
       </div>
-      <div id="mobile_more_info2">
+      <div id="mobile_more_info2" style="display: none;">
         <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
           <dt class="text-cyan-400">Theme</dt>
           <dd id="themeTag" class="text-white sm:col-span-2 sm:mt-0">Theme Tags - Comming soon</dd>
@@ -103,7 +103,7 @@
     <div>Chords container</div>
   </div>
 
-  <!-- Change the var and let-->
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~ Change acording to the song the var and let ~~~~~~~~~~~~~~~~~~~~~~~ -->
   <script>
     let _orginalSongName = "ගැලවුම්කරු මිදුම්කරු - දෙවිදුන් මා එසෙව්වා "; // id= orginalSongName
     let _orginalSongWriterName = "Hilsong"; // id= orginalSongWriterName
@@ -111,10 +111,10 @@
     let _BPM = 200; // id= BPM
     // var _themeTag = ; // id= themeTag
     let _oLanguage = "English"; // id= oLanguage
-    //id = translator_details
-    var _translator = "huwifjh"; // id= translator
-    var _tLanguage = "Sinhala"; // id= tLanguage
-    var _noTranslation = false; // if the song is not a Translation = true , else = false
+    
+    var _translator = "huwifjh"; // id= translator                                          |
+    var _tLanguage = "Sinhala"; // id= tLanguage                                            |->   id = translator_details
+    var _noTranslation = true; // if the song is not a Translation = true , else = false   |
 
     // var _aLanguage = ; // id= aLanguage
     var _tempoTag; // Do Not Change This, id= tempoTag
