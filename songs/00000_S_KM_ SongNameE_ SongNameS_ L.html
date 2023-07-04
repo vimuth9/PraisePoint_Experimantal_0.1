@@ -40,7 +40,7 @@
 
       <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
         <dt class="text-cyan-400">Orginal Key</dt>
-        <dd id="orginalKey" class="text-white sm:col-span-2 sm:mt-0">--</dd>
+        <dd id="orginalKey" style="align-items: center; width: fit-content; padding: 0 7px; background-color: rgb(216, 0, 0);" class="text-white sm:col-span-2 sm:mt-0 rounded-md ">--</dd>
       </div>
       <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
         <div>
@@ -98,17 +98,87 @@
 
     </div>
   </div>
-  <!-- Chords and Lyrics application container-->
-  <div class="container mx-auto h-screen max-w-7xl bg-gray-800 p-6">
-    <div>Chords container</div>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- Chords Lyrics Togler -->
+<div>
+  <nav class="colum flex bg-cyan-950 text-white">
+    <div role="button" class="bg-cyan-600 p-4 hover:bg-cyan-500 hover:text-cyan-950">Chords</div>
+    <div role="button" class="bg-cyan-600 px-6 py-4 hover:bg-cyan-500 hover:text-cyan-950">Lyrics</div>
+    <div role="button" class="bg-cyan-600 p-4 hover:bg-cyan-500 hover:text-cyan-950">Resource</div>
+  </nav>
+
+  <!-- Transpose Controller -->
+  <div id="" class="flex justify-center bg-cyan-700 p-5 text-white">
+    <div class="bg-cyan-950 p-2">Transpose</div>
+    <select class="bg-cyan-800 p-2 text-center" name="Transpose" id="">
+      <option value="TOrginalKey">E - Orginal Key</option>
+      <option value="TsuggestKey">E - Suggestion</option>
+      <option value="1">C</option>
+      <option value="2">C#</option>
+      <option value="3">Db</option>
+      <option value="4">D</option>
+      <option value="5">D#</option>
+      <option value="6">Eb</option>
+      <option value="7">E</option>
+      <option value="8">F</option>
+      <option value="9">F#</option>
+      <option value="10">Gb</option>
+      <option value="11">G</option>
+      <option value="12">G#</option>
+      <option value="13">Ab</option>
+      <option value="14">A</option>
+      <option value="15">A#</option>
+      <option value="16">Bb</option>
+      <option value="17">B</option>
+    </select>
   </div>
+
+  <!-- Chord + Lyrics Container concecpt 02 -->
+  <div class="bg-black text-white">
+    <div id="PraisePoint_Catogorie">[ Intro - Concecpt 01 Tester ]</div>
+    <div id="PraisePoint_Chords_Line">chord line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
+    <br />
+    <div id="PraisePoint_Catogorie">[ Chorus - Transpose Tester ]</div>
+    <div id="PraisePoint_Chords_Line">chord line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
+    <div id="PraisePoint_Lyrics_Line">Lyrics Line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
+    <br />
+    <div id="PraisePoint_Catogorie">[ Verse 01 - Location Tester]</div>
+    <div id="PraisePoint_Chords_Line">*A * Esus *C#m *B</div>
+    <div id="PraisePoint_Lyrics_Line">^ගැලවුම්කරු මිදුම්ක^කරු - ^දෙවිදුන් මා එසෙව්වා^</div>
+    <div id="PraisePoint_Chords_Line">*Bb * Fsus *Dm *C</div>
+    <div id="PraisePoint_Lyrics_Line">^ගැලවුම්කරු මිදුම්ක^කරු - ^දෙවිදුන් මා එසෙව්වා^</div>
+    <br />
+  </div>
+
+  <!-- Chord + Lyrics Container concecpt 01 -->
+  <div class="bg-black text-white">
+    <div id="PraisePoint_Catogorie">[ Intro - Concecpt 02 Tester ]</div>
+    <div id="PraisePoint_Chords_Line">chord line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
+    <br />
+    <div id="PraisePoint_Catogorie">[ Chorus - Transpose Tester ]</div>
+    <div id="PraisePoint_Chords_Line">chord line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
+    <div id="PraisePoint_Lyrics_Line">Lyrics Line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
+    <br />
+    <div id="PraisePoint_Catogorie">[ Verse 01 - Location Tester]</div>
+    <div id="PraisePoint_Chords_Line">*A * Esus *C#m *B</div>
+    <div id="PraisePoint_Lyrics_Line">^ගැලවුම්කරු මිදුම්ක^කරු - ^දෙවිදුන් මා එසෙව්වා^</div>
+    <div id="PraisePoint_Chords_Line">*Bb * Fsus *Dm *C</div>
+    <div id="PraisePoint_Lyrics_Line">^ගැලවුම්කරු මිදුම්ක^කරු - ^දෙවිදුන් මා එසෙව්වා^</div>
+    <br />
+  </div>
+
+
+</div>
+<!-- Resource Container -->
+<!--side panel for the mobile view for thr desktop view it should be beside the chords and Lyrics Column -->
+<div></div>
 
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~ Change acording to the song the var and let ~~~~~~~~~~~~~~~~~~~~~~~ -->
   <script>
     let _orginalSongName = "ගැලවුම්කරු මිදුම්කරු - දෙවිදුන් මා එසෙව්වා "; // id= orginalSongName
     let _orginalSongWriterName = "Hilsong"; // id= orginalSongWriterName
     var _orginalKey = "E"; // id= orginalKey
-    let _BPM = 200; // id= BPM
+    let _BPM = 1200; // id= BPM
     // var _themeTag = ; // id= themeTag
     let _oLanguage = "English"; // id= oLanguage
     
@@ -125,9 +195,5 @@
     document.getElementById("moreInfo").addEventListener("click", detailB);
   </script>
 
-  <php>
-
-  </php>
 </body>
-
 </html>
