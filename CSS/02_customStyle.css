@@ -28,6 +28,8 @@
   
     /* Position the tooltip */
     position: absolute;
+    transform: translateX(-40%);
+    top: 30px;
     z-index: 1;
   }
   

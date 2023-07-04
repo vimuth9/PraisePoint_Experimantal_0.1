@@ -45,23 +45,24 @@
         <div>
           <dt class="inline-flex text-cyan-400">Tempo
           </dt>
-          <div class="tooltip">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" class="text-cyan-400 infoico hover:text-white">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
-            </svg>
-            <span class="tooltiptext">Below 110 bpm = Slow <br> 110-150 bpm = Medium <br> Above 150 bpm = Fast</span>
-          </div>
         </div>
         <dd class="text-white sm:col-span-2 sm:mt-0">
           <div class="columns-2">
             <div><span id="BPM">--</span> bpm</div>
-            <div id="tempoTag">
+            <div id="tempoTag" style="display: inline-flex;">
               <div id="tFast" class="hidden rounded-md bg-rose-600"
                 style="align-items: center; width: fit-content; padding: 0 7px;">Fast</div>
               <div id="tMedium" class="hidden rounded-md bg-orange-600"
                 style="align-items: center; width: fit-content; padding: 0 7px;">Medium</div>
               <div id="tSlow" class="hidden rounded-md bg-green-600"
                 style="align-items: center; width: fit-content; padding: 0 7px;">Slow</div>
+                <div class="tooltip">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" class="text-cyan-400 infoico hover:text-white">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                  </svg>
+                  <span class="tooltiptext">Below 110 bpm = Slow <br> 110-150 bpm = Medium <br> Above 150 bpm = Fast</span>
+                </div>
+      
             </div>
           </div>
         </dd>
