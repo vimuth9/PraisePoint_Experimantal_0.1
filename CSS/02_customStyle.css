@@ -1,9 +1,3 @@
-#mobile_more_info1 {
-    display: none;
-}
-#mobile_more_info2 {
-    display: none;
-}
 #translator_details {
     display: none;
     
@@ -28,6 +22,8 @@
   
     /* Position the tooltip */
     position: absolute;
+    transform: translateX(-40%);
+    top: 30px;
     z-index: 1;
   }
   

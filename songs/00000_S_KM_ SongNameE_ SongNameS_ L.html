@@ -21,52 +21,57 @@
 
 <body class="bg-slate-700">
   <!--content container-->
-  <div class="container mx-auto h-screen max-w-7xl bg-gray-800 p-6">
+  <div class="container mx-auto max-w-7xl bg-gray-800 p-6">
     <!--Song Detail box-->
     <div class="col rounded-2xl bg-slate-700 p-6 ">
       <div class="flex w-full justify-between">
         <h1 id="orginalSongName" class="text-2xl font-bold text-cyan-300 sm:text-4xl sm:px-3">Song Name</h1>
         <svg role="button" id="moreInfo" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-          stroke-width="1.5" stroke="currentColor" class="h-8 w-8 p-1 text-cyan-300 hover:text-white ">
+          stroke-width="1.5" stroke="currentColor"
+          class="h-8 w-8 p-1 text-cyan-300 hover:text-white active:bg-cyan-700 rounded-md">
           <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
         </svg>
       </div>
 
-      <div id="mobile_more_info1" class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+      <div id="mobile_more_info1" style="display: none;" class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
         <dt class="text-cyan-400">Writer</dt>
         <dd id="orginalSongWriterName" class="text-white sm:col-span-2 sm:mt-0">Unknown</dd>
       </div>
 
       <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
         <dt class="text-cyan-400">Orginal Key</dt>
-        <dd id="orginalKey" class="text-white sm:col-span-2 sm:mt-0">--</dd>
+        <dd id="orginalKey" style="align-items: center; width: fit-content; padding: 0 7px; background-color: rgb(216, 0, 0);" class="text-white sm:col-span-2 sm:mt-0 rounded-md ">--</dd>
       </div>
       <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
         <div>
           <dt class="inline-flex text-cyan-400">Tempo
           </dt>
-          <div class="tooltip">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" class="text-cyan-400 infoico hover:text-white">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
-            </svg>
-            <span class="tooltiptext">Below 110 bpm = Slow <br> 110-150 bpm = Medium <br> Above 150 bpm = Fast</span>
-          </div>
         </div>
         <dd class="text-white sm:col-span-2 sm:mt-0">
           <div class="columns-2">
             <div><span id="BPM">--</span> bpm</div>
-            <div id="tempoTag">
+            <div id="tempoTag" style="display: inline-flex;">
               <div id="tFast" class="hidden rounded-md bg-rose-600"
                 style="align-items: center; width: fit-content; padding: 0 7px;">Fast</div>
               <div id="tMedium" class="hidden rounded-md bg-orange-600"
                 style="align-items: center; width: fit-content; padding: 0 7px;">Medium</div>
               <div id="tSlow" class="hidden rounded-md bg-green-600"
                 style="align-items: center; width: fit-content; padding: 0 7px;">Slow</div>
+              <div class="tooltip">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.4"
+                  stroke="currentColor" class="text-cyan-400 infoico hover:text-white">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                </svg>
+                <span class="tooltiptext">Below 110 bpm = Slow <br> 110-150 bpm = Medium <br> Above 150 bpm =
+                  Fast</span>
+              </div>
+
             </div>
           </div>
         </dd>
       </div>
-      <div id="mobile_more_info2">
+      <div id="mobile_more_info2" style="display: none;">
         <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
           <dt class="text-cyan-400">Theme</dt>
           <dd id="themeTag" class="text-white sm:col-span-2 sm:mt-0">Theme Tags - Comming soon</dd>
@@ -93,34 +98,102 @@
 
     </div>
   </div>
-  <!-- Chords and Lyrics application container-->
-  <div class="container mx-auto h-screen max-w-7xl bg-gray-800 p-6">
-    <div>Chords container</div>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- Chords Lyrics Togler -->
+<div  class="container mx-auto max-w-7xl bg-gray-800 p-6">
+  <nav class="colum flex bg-cyan-950 text-white">
+    <div role="button" class="bg-cyan-600 p-4 hover:bg-cyan-500 hover:text-cyan-950">Chords</div>
+    <div role="button" class="bg-cyan-600 px-6 py-4 hover:bg-cyan-500 hover:text-cyan-950">Lyrics</div>
+    <div role="button" class="bg-cyan-600 p-4 hover:bg-cyan-500 hover:text-cyan-950">Resource</div>
+  </nav>
+
+  <!-- Transpose Controller -->
+  <div id="" class="flex justify-center bg-cyan-700 p-5 text-white">
+    <div class="bg-cyan-950 p-2">Transpose</div>
+    <select class="bg-cyan-800 p-2 text-center" name="Transpose" id="">
+      <option value="TOrginalKey">E - Orginal Key</option>
+      <option value="TsuggestKey">E - Suggestion</option>
+      <option value="1">C</option>
+      <option value="2">C#</option>
+      <option value="3">Db</option>
+      <option value="4">D</option>
+      <option value="5">D#</option>
+      <option value="6">Eb</option>
+      <option value="7">E</option>
+      <option value="8">F</option>
+      <option value="9">F#</option>
+      <option value="10">Gb</option>
+      <option value="11">G</option>
+      <option value="12">G#</option>
+      <option value="13">Ab</option>
+      <option value="14">A</option>
+      <option value="15">A#</option>
+      <option value="16">Bb</option>
+      <option value="17">B</option>
+    </select>
   </div>
 
-  <!-- Change the var and let-->
+  <!-- Chord + Lyrics Container concecpt 02 -->
+  <div class="bg-black text-white">
+    <div id="PraisePoint_Catogorie">[ Intro - Concecpt 01 Tester ]</div>
+    <div id="PraisePoint_Chords_Line">chord line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
+    <br />
+    <div id="PraisePoint_Catogorie">[ Chorus - Transpose Tester ]</div>
+    <div id="PraisePoint_Chords_Line">chord line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
+    <div id="PraisePoint_Lyrics_Line">Lyrics Line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
+    <br />
+    <div id="PraisePoint_Catogorie">[ Verse 01 - Location Tester]</div>
+    <div id="PraisePoint_Chords_Line">*A * Esus *C#m *B</div>
+    <div id="PraisePoint_Lyrics_Line">^ගැලවුම්කරු මිදුම්ක^කරු - ^දෙවිදුන් මා එසෙව්වා^</div>
+    <div id="PraisePoint_Chords_Line">*Bb * Fsus *Dm *C</div>
+    <div id="PraisePoint_Lyrics_Line">^ගැලවුම්කරු මිදුම්ක^කරු - ^දෙවිදුන් මා එසෙව්වා^</div>
+    <br />
+  </div>
+
+  <!-- Chord + Lyrics Container concecpt 01 -->
+  <div class="bg-black text-white">
+    <div id="PraisePoint_Catogorie">[ Intro - Concecpt 02 Tester ]</div>
+    <div id="PraisePoint_Chords_Line">chord line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
+    <br />
+    <div id="PraisePoint_Catogorie">[ Chorus - Transpose Tester ]</div>
+    <div id="PraisePoint_Chords_Line">chord line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
+    <div id="PraisePoint_Lyrics_Line">Lyrics Line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
+    <br />
+    <div id="PraisePoint_Catogorie">[ Verse 01 - Location Tester]</div>
+    <div id="PraisePoint_Chords_Line">*A * Esus *C#m *B</div>
+    <div id="PraisePoint_Lyrics_Line">^ගැලවුම්කරු මිදුම්ක^කරු - ^දෙවිදුන් මා එසෙව්වා^</div>
+    <div id="PraisePoint_Chords_Line">*Bb * Fsus *Dm *C</div>
+    <div id="PraisePoint_Lyrics_Line">^ගැලවුම්කරු මිදුම්ක^කරු - ^දෙවිදුන් මා එසෙව්වා^</div>
+    <br />
+  </div>
+
+
+</div>
+<!-- Resource Container -->
+<!--side panel for the mobile view for thr desktop view it should be beside the chords and Lyrics Column -->
+<div></div>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~ Change acording to the song the var and let ~~~~~~~~~~~~~~~~~~~~~~~ -->
   <script>
     let _orginalSongName = "ගැලවුම්කරු මිදුම්කරු - දෙවිදුන් මා එසෙව්වා "; // id= orginalSongName
     let _orginalSongWriterName = "Hilsong"; // id= orginalSongWriterName
     var _orginalKey = "E"; // id= orginalKey
-    let _BPM = 200; // id= BPM
+    let _BPM = 1200; // id= BPM
     // var _themeTag = ; // id= themeTag
-    let _oLanguage = "Sinhala"; // id= oLanguage
-
-    var _translator = "huwifjh"; // id= translator
-    var _tLanguage = "Sinhala"; // id= tLanguage
-    var _noTranslation = false ; // if the song is not a Translation = true , else = false
+    let _oLanguage = "English"; // id= oLanguage
+    
+    var _translator = "huwifjh"; // id= translator                                          |
+    var _tLanguage = "Sinhala"; // id= tLanguage                                            |->   id = translator_details
+    var _noTranslation = true; // if the song is not a Translation = true , else = false   |
 
     // var _aLanguage = ; // id= aLanguage
     var _tempoTag; // Do Not Change This, id= tempoTag
-    detailA()
-    
+    detailA();
+    noTranslator();
+    var translator_details = document.getElementById("translator_details");
+
     document.getElementById("moreInfo").addEventListener("click", detailB);
   </script>
 
-  <php>
-
-  </php>
 </body>
-
 </html>
