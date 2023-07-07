@@ -104,9 +104,9 @@
 <!-- Chords Lyrics Togler -->
 <div  class="container mx-auto max-w-7xl bg-gray-800 p-6">
   <nav class="colum flex bg-cyan-950 text-white">
-    <div role="button" class="bg-cyan-600 p-4 hover:bg-cyan-500 hover:text-cyan-950">Chords</div>
-    <div role="button" class="bg-cyan-600 px-6 py-4 hover:bg-cyan-500 hover:text-cyan-950">Lyrics</div>
-    <div role="button" class="bg-cyan-600 p-4 hover:bg-cyan-500 hover:text-cyan-950">Resource</div>
+    <div id="PraisePoint_ShowChords" role="button" class="bg-cyan-600 p-4 hover:bg-cyan-500 hover:text-cyan-950" onclick="PraisePoint_Chords()">Chords</div>
+    <div id="PraisePoint_ShowLyrics" role="button" class="bg-cyan-600 px-6 py-4 hover:bg-cyan-500 hover:text-cyan-950" onclick="PraisePoint_Lyrics()">Lyrics</div>
+    <div id="" role="button" class="bg-cyan-600 p-4 hover:bg-cyan-500 hover:text-cyan-950">Resource</div>
   </nav>
 
   <!-- Transpose Controller -->
@@ -137,35 +137,36 @@
 
   <!-- Chord + Lyrics Container concecpt 02 -->
   <div class="bg-black text-white">
-    <div id="PraisePoint_Catogorie">[ Intro - Concecpt 01 Tester ]</div>
-    <div id="PraisePoint_Chords_Line">chord line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
+    <div class="PraisePoint_Catogorie">[ Intro - Concecpt 01 Tester ]</div>
+    <div class="PraisePoint_Chords_Line">chord line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
     <br />
-    <div id="PraisePoint_Catogorie">[ Chorus - Transpose Tester ]</div>
-    <div id="PraisePoint_Chords_Line">chord line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
-    <div id="PraisePoint_Lyrics_Line">Lyrics Line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
+    <div class="PraisePoint_Catogorie">[ Chorus - Transpose Tester ]</div>
+    <div class="PraisePoint_Chords_Line">chord line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
+    <div class="PraisePoint_Lyrics_Line">Lyrics Line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
     <br />
-    <div id="PraisePoint_Catogorie">[ Verse 01 - Location Tester]</div>
-    <div id="PraisePoint_Chords_Line">*A * Esus *C#m *B</div>
-    <div id="PraisePoint_Lyrics_Line">^ගැලවුම්කරු මිදුම්ක^කරු - ^දෙවිදුන් මා එසෙව්වා^</div>
-    <div id="PraisePoint_Chords_Line">*Bb * Fsus *Dm *C</div>
-    <div id="PraisePoint_Lyrics_Line">^ගැලවුම්කරු මිදුම්ක^කරු - ^දෙවිදුන් මා එසෙව්වා^</div>
+    <div class="PraisePoint_Catogorie">[ Verse 01 - Location Tester]</div>
+    <div class="PraisePoint_Chords_Line">*A * Esus *C#m *B</div>
+    <div class="PraisePoint_Lyrics_Line">^ගැලවුම්කරු මිදුම්ක^කරු - ^දෙවිදුන් මා එසෙව්වා^</div>
+    <div class="PraisePoint_Chords_Line">*Bb * Fsus *Dm *C</div>
+    <div class="PraisePoint_Lyrics_Line">^ගැලවුම්කරු මිදුම්ක^කරු - ^දෙවිදුන් මා එසෙව්වා^</div>
+    <div class="PraisePoint_Lyrics_Line">ප්‍රශංසාවේ දෙවිදු නමදිමු ගෞරවයෙන් යේසුස් නවතිමු නවතිමු ගෞරවයෙන් </div>
     <br />
   </div>
 
   <!-- Chord + Lyrics Container concecpt 01 -->
   <div class="bg-black text-white">
-    <div id="PraisePoint_Catogorie">[ Intro - Concecpt 02 Tester ]</div>
-    <div id="PraisePoint_Chords_Line">chord line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
+    <div class="PraisePoint_Catogorie">[ Intro - Concecpt 02 Tester ]</div>
+    <div class="PraisePoint_Chords_Line">chord line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
     <br />
-    <div id="PraisePoint_Catogorie">[ Chorus - Transpose Tester ]</div>
-    <div id="PraisePoint_Chords_Line">chord line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
-    <div id="PraisePoint_Lyrics_Line">Lyrics Line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
+    <div class="PraisePoint_Catogorie">[ Chorus - Transpose Tester ]</div>
+    <div class="PraisePoint_Chords_Line">chord line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
+    <div class="PraisePoint_Lyrics_Line">Lyrics Line Test - ABCDEFG - # - b - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
     <br />
-    <div id="PraisePoint_Catogorie">[ Verse 01 - Location Tester]</div>
-    <div id="PraisePoint_Chords_Line">*A * Esus *C#m *B</div>
-    <div id="PraisePoint_Lyrics_Line">^ගැලවුම්කරු මිදුම්ක^කරු - ^දෙවිදුන් මා එසෙව්වා^</div>
-    <div id="PraisePoint_Chords_Line">*Bb * Fsus *Dm *C</div>
-    <div id="PraisePoint_Lyrics_Line">^ගැලවුම්කරු මිදුම්ක^කරු - ^දෙවිදුන් මා එසෙව්වා^</div>
+    <div class="PraisePoint_Catogorie">[ Verse 01 - Location Tester]</div>
+    <div class="PraisePoint_Chords_Line">*A * Esus *C#m *B</div>
+    <div class="PraisePoint_Lyrics_Line">^ගැලවුම්කරු මිදුම්ක^කරු - ^දෙවිදුන් මා එසෙව්වා^</div>
+    <div class="PraisePoint_Chords_Line">*Bb * Fsus *Dm *C</div>
+    <div class="PraisePoint_Lyrics_Line">^ගැලවුම්කරු මිදුම්ක^කරු - ^දෙවිදුන් මා එසෙව්වා^</div>
     <br />
   </div>
 
@@ -178,16 +179,16 @@
   <script>
     //~~~~~~~~~~~~~~~~~~~~~~~ Change acording to the song the var and let ~~~~~~~~~~~~~~~~~~~~~~~
     // Song Name
-    let _orginalSongName = "ගැලවුම්කරු මිදුම්කරු - දෙවිදුන් මා එසෙව්වා "; // id= orginalSongName
+    const _orginalSongName = "ගැලවුම්කරු මිදුම්කරු - දෙවිදුන් මා එසෙව්වා "; // id= orginalSongName
     //Orginal Song Details
-    let _orginalSongWriterName = "Hilsong";     // id= orginalSongWriterName
+    const _orginalSongWriterName = "Hilsong";     // id= orginalSongWriterName
     var _orginalKey = "E";                      // id= orginalKey
-    let _BPM = 120;                            // id= BPM
-    let _oLanguage = "English";                 // id= oLanguage
+    var _BPM = 120;                            // id= BPM
+    const _oLanguage = "English";                 // id= oLanguage
     //Translation Details
-    let _noTranslation = true;                  // if the song is not a Translation = true , else = false   |
-    let _translator = "huwifjh";                // id= translator                                          |
-    let _tLanguage = "Sinhala";                 // id= tLanguage                                            |->   id = translator_details
+    const _noTranslation = true;                  // if the song is not a Translation = true , else = false   |
+    const _translator = "huwifjh";                // id= translator                                          |
+    const _tLanguage = "Sinhala";                 // id= tLanguage                                            |->   id = translator_details
     // var _aLanguage = ;                       // id= aLanguage
 
 
@@ -200,7 +201,8 @@
     // noTranslatoyr();  //  This part is useless if I want To hide the Information in Desktop mode
     
     // ```````````````````` Transposer Javascript ````````````````````````
-  </script>
+    const Chord_Lines = document.getElementsByClassName("PraisePoint_Chords_Line");
+</script>
 
 </body>
 </html>

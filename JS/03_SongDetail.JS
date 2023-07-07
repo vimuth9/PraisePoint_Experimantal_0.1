@@ -78,27 +78,25 @@ function detailB() {
         moreInfo.style.transform = "rotate(180deg)";
         mobileMoreInfo1.style.display = "grid";
         mobileMoreInfo2.style.display = "grid";
-        desitionTranslatorShow();
+        decisionTranslatorShow();
         console.log("show / expands all the unwanted details about the song");
     } else {
         moreInfo.style.transform = "rotate(0deg)";
         mobileMoreInfo1.style.display = "none";
         mobileMoreInfo2.style.display = "none";
-        desitionTranslatorHide();
+        decisionTranslatorHide();
         console.log("hides /collaps all the unwanted details about the song");
-
-
     }
 }
 
-function desitionTranslatorShow() {
+function decisionTranslatorShow() {
     if (_noTranslation === false) {
         translator_details.style.display = "grid";
         console.log("expand succeed -this a translation of a another song which is composed by the writer");
     }
 }
 
-function desitionTranslatorHide() {
+function decisionTranslatorHide() {
     if (_noTranslation === false) {
         translator_details.style.display = "none";
         console.log("collaps succeed-this a translation of a another song which is composed by the writer");
