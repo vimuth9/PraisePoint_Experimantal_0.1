@@ -17,6 +17,7 @@
 
   <!--JS Files here-->
   <script src="../JS/03_SongDetail.JS"></script>
+  <script src="../JS/01_TransposeM.js"></script>
 </head>
 
 <body class="bg-slate-700">
@@ -72,10 +73,11 @@
         </dd>
       </div>
       <div id="mobile_more_info2" style="display: none;">
+        <!-- Use this Theme code in the Future if I'm Adding themes for each song
         <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
           <dt class="text-cyan-400">Theme</dt>
           <dd id="themeTag" class="text-white sm:col-span-2 sm:mt-0">Theme Tags - Comming soon</dd>
-        </div>
+        </div> -->
         <div class="border-b py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
           <dt class="text-cyan-400">Language (Orginal song)</dt>
           <dd id="oLanguage" class="text-white sm:col-span-2 sm:mt-0">-------</dd>
@@ -110,7 +112,7 @@
   <!-- Transpose Controller -->
   <div id="" class="flex justify-center bg-cyan-700 p-5 text-white">
     <div class="bg-cyan-950 p-2">Transpose</div>
-    <select class="bg-cyan-800 p-2 text-center" name="Transpose" id="">
+    <select onchange="transpose()" class="bg-cyan-800 p-2 text-center" name="Transpose">
       <option value="TOrginalKey">E - Orginal Key</option>
       <option value="TsuggestKey">E - Suggestion</option>
       <option value="1">C</option>
@@ -169,30 +171,35 @@
 
 
 </div>
-<!-- Resource Container -->
+<!-- ~~~~~~~~~~~~~~~~~~~Resource Container~~~~~~~~~~~~~~~~~ -->
 <!--side panel for the mobile view for thr desktop view it should be beside the chords and Lyrics Column -->
 <div></div>
 
-  <!-- ~~~~~~~~~~~~~~~~~~~~~~~ Change acording to the song the var and let ~~~~~~~~~~~~~~~~~~~~~~~ -->
   <script>
+    //~~~~~~~~~~~~~~~~~~~~~~~ Change acording to the song the var and let ~~~~~~~~~~~~~~~~~~~~~~~
+    // Song Name
     let _orginalSongName = "ගැලවුම්කරු මිදුම්කරු - දෙවිදුන් මා එසෙව්වා "; // id= orginalSongName
-    let _orginalSongWriterName = "Hilsong"; // id= orginalSongWriterName
-    var _orginalKey = "E"; // id= orginalKey
-    let _BPM = 1200; // id= BPM
-    // var _themeTag = ; // id= themeTag
-    let _oLanguage = "English"; // id= oLanguage
-    
-    var _translator = "huwifjh"; // id= translator                                          |
-    var _tLanguage = "Sinhala"; // id= tLanguage                                            |->   id = translator_details
-    var _noTranslation = true; // if the song is not a Translation = true , else = false   |
+    //Orginal Song Details
+    let _orginalSongWriterName = "Hilsong";     // id= orginalSongWriterName
+    var _orginalKey = "E";                      // id= orginalKey
+    let _BPM = 120;                            // id= BPM
+    let _oLanguage = "English";                 // id= oLanguage
+    //Translation Details
+    let _noTranslation = true;                  // if the song is not a Translation = true , else = false   |
+    let _translator = "huwifjh";                // id= translator                                          |
+    let _tLanguage = "Sinhala";                 // id= tLanguage                                            |->   id = translator_details
+    // var _aLanguage = ;                       // id= aLanguage
 
-    // var _aLanguage = ; // id= aLanguage
+
+    // ```````````````` Do Not Change AnyThing Under This ``````````````````````
+    // var _themeTag = ; // id= themeTag // Use this Theme code in the Future if I'm Adding Themes for each song
     var _tempoTag; // Do Not Change This, id= tempoTag
+    var translator_details = document.getElementById("translator_details"); // Transla
+    document.getElementById("moreInfo").addEventListener("click", detailB); // Exicution of show more info about the song
     detailA();
-    noTranslator();
-    var translator_details = document.getElementById("translator_details");
-
-    document.getElementById("moreInfo").addEventListener("click", detailB);
+    // noTranslatoyr();  //  This part is useless if I want To hide the Information in Desktop mode
+    
+    // ```````````````````` Transposer Javascript ````````````````````````
   </script>
 
 </body>

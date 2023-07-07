@@ -70,7 +70,7 @@ function noTranslator(_noTranslation) {
 
 //~~~~~~~~~~~~~~~~~~~~~~~ JS to show more infor about the song in mobile view ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-function detailB(_noTranslation) {
+function detailB() {
     var moreInfo = document.getElementById("moreInfo");
     var mobileMoreInfo1 = document.getElementById("mobile_more_info1");
     var mobileMoreInfo2 = document.getElementById("mobile_more_info2");
