@@ -49,9 +49,12 @@
   color: rgb(174, 246, 255);
   font-size: 20px;
 }
-@media ( max-width: 720px ) {
+
+@media (max-width: 720px) {
+
+  .PraisePoint_Catogorie,
   .PraisePoint_Chords_Line,
   .PraisePoint_Lyrics_Line {
-    font-size: 3vw;
+    font-size: 4vw;
   }
 }
