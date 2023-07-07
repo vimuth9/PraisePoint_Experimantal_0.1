@@ -1,5 +1,5 @@
-// NAV button to show with Chords and Show Lyrics
-function PraisePoint_Chords() {
+// ```````````````````` Chords Lyrics Nav Javascript ````````````````````````
+    function PraisePoint_Chords() {
     Transpose_Controller.style.display = "flex";
     for (const Chord_Line of Chord_Lines) {
         Chord_Line.style.display = "flex";
@@ -15,7 +15,7 @@ function PraisePoint_Lyrics() {
 
 }
 
-//Transposer
+// ```````````````````` Transposer Javascript ````````````````````````
 function transposeControler() {
 }
 function orginalKeyHandler() {
