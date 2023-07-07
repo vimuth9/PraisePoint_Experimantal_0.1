@@ -1,5 +1,5 @@
 // ```````````````````` Chords Lyrics Nav Javascript ````````````````````````
-    function PraisePoint_Chords() {
+function PraisePoint_Chords() {
     Transpose_Controller.style.display = "flex";
     for (const Chord_Line of Chord_Lines) {
         Chord_Line.style.display = "flex";
@@ -12,6 +12,7 @@ function PraisePoint_Lyrics() {
         Chord_Line.style.display = "none";
     }
     console.log("Hide Chords Transpose Controlls")
+    
 
 }
 
