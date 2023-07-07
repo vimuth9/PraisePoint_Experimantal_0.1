@@ -42,16 +42,16 @@
 .PraisePoint_Chords_Line {
   display: flex;
   color: white;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .PraisePoint_Lyrics_Line {
-  color: red;
-  font-size: 20px;
+  color: rgb(174, 246, 255);
+  font-size: 25px;
 }
 @media ( max-width: 625px ) {
   .PraisePoint_Chords_Line,
   .PraisePoint_Lyrics_Line {
-    font-size: 3.2vw;
+    font-size: 4vw;
   }
 }
