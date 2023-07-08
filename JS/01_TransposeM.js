@@ -36,37 +36,12 @@ function currentKeyToNum() {
 
 //Transposing algorithum
 function transpose() {
-    var originalKey = document.getElementById("orginalKeySelector").value;
-    var transposedKey = document.querySelector('[name="Transpose"]').value;
-  
-    var originalIndex = chords.indexOf(originalKey);
-    var transposedIndex = chords.indexOf(transposedKey);
-  
-    var transposedChords = [];
-    var chordsLine = document.querySelector('.PraisePoint_Chords_Line').textContent;
-    var chordsArray = chordsLine.trim().split(' ');
-  
-    for (var i = 0; i < chordsArray.length; i++) {
-      var chord = chordsArray[i];
-      var chordIndex = chords.indexOf(chord);
-  
-      if (chordIndex !== -1) {
-        var transposedChordIndex = (chordIndex - originalIndex + transposedIndex + chords.length) % chords.length;
-        var transposedChord = chords[transposedChordIndex];
-        transposedChords.push(transposedChord);
-      } else {
-        transposedChords.push(chord);
-      }
-    }
-  
-    var transposedChordsLine = transposedChords.join(' ');
-  
-    document.querySelector('.PraisePoint_Chords_Line').textContent = transposedChordsLine;
+    console.log(" Key Transposed ")
   }
   
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-var chords = ["A","A#","Bb","B","C","C#","Db","D","D#","Eb","E","F","F#","Gb","G","G#","Ab"];
+var chords = ["C","C#","Db","D","D#","Eb","E","F","F#","Gb","G","G#","Ab","A","A#","Bb","B"];
 
 var numberCharts = [
     ["Ab", [
