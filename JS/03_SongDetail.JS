@@ -19,6 +19,7 @@ function detailA() {
         console.log("_orginalKey Missing")
     } else {
         document.getElementById("orginalKey").innerHTML = _orginalKey;
+        document.getElementById("orginalKeySelector").innerHTML = _orginalKey + " - Orginal Key";
     }
     //BPM Number checker
     if (_BPM == "" || _BPM == null) {
