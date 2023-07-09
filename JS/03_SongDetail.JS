@@ -1,5 +1,5 @@
 // ~~~~~~~~~~~~~~~~~~~~~~~~ JS to process song details ~~~~~~~~~~~~~~~~~~~~~~~~~
-
+var _tempoTag; // Do Not Change This, id= tempoTag
 function detailA() {
     // Orginal Song Name Availability test
     if (_orginalSongName == "" || _orginalSongName == null) {
@@ -19,7 +19,7 @@ function detailA() {
         console.log("_orginalKey Missing")
     } else {
         document.getElementById("orginalKey").innerHTML = _orginalKey;
-        document.getElementById("orginalKeySelector").innerHTML = _orginalKey + " - Orginal Key";
+        document.getElementById("orginalKeyOption").innerHTML = _orginalKey + " - Orginal Key";
     }
     //BPM Number checker
     if (_BPM == "" || _BPM == null) {
