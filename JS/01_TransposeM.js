@@ -1,19 +1,3 @@
-// ```````````````````` Chords Lyrics Nav Javascript ````````````````````````
-function PraisePoint_Chords() {
-  Transpose_Controller.style.display = "flex";
-  for (const Chord_Line of Chord_Lines) {
-    Chord_Line.style.display = "flex";
-  }
-  console.log("Show Chords Transpose Controlls");
-}
-
-function PraisePoint_Lyrics() {
-  Transpose_Controller.style.display = "none";
-  for (const Chord_Line of Chord_Lines) {
-    Chord_Line.style.display = "none";
-  }
-  console.log("Hide Chords Transpose Controlls");
-}
 
 // ```````````````````` Transposer Javascript ````````````````````````
 
@@ -21,18 +5,33 @@ function preTranspose() {
     _currentKey = _orginalKey;
 }
 //finalized
-//Transposing algorithum------------------------------------------------------------
+var _TKeySelector = document.getElementById("KeySelector");
+var _currentKey;
+
 function transpose() {
     console.log(" Key Transposor lunched ");
     // 1. Convert Chord Capital letter inside "PraisePoint_Chords_Line" to Numbers according the Chord_Number_Chart() with the use of _currentKey
 
+    console.log(" Chords to Numbers sucseesful ");
+    //2.
+    assignNewKey();
+    //3.Convert Numbers to Capital letter inside "PraisePoint_Chords_Line"
 
+    console.log(" Numbers to Chords sucseesful ");
+    console.log(" New _currentKey is " + _currentKey);
 }
 
-
+function assignNewKey() {
+  if ( _TKeySelector === null || _TKeySelector === "orginalKey") {
+      _currentKey = _orginalKey;
+  } else {
+      _currentKey = _TKeySelector;
+  }
+}
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // currentkey to currentKeyNumber - chart and
+
 function currentKey() {
   switch (_currentKey) {
     case "C":
@@ -109,7 +108,6 @@ function currentKey() {
       break;
   }
 }
-
 var chords = ["C","C#","D♭","D","D#","E♭","E","F","F#","G♭","G","G#","A♭","A","A#","B♭","B",];
 var numberCharts = [
   ["C",[["C", "1"],["D", "2"],["E♭", "♭3"],["E", "3"],["F", "4"],["F#", "#4"],["G", "5"],["A♭", "♭6"],["A", "6"],["B♭", "♭7"],["B", "7"],],],

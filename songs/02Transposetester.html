@@ -112,8 +112,8 @@
   <!-- Transpose Controller -->
   <div id="PraisePointTrasposeController" class="flex justify-center bg-cyan-700 p-5 text-white">
     <div class="bg-cyan-950 p-2">Transpose</div>
-    <select id="TKeySelector" onchange="transpose()" class="bg-cyan-800 p-2 text-center" name="Transpose">
-      <option id="orginalKeyOption" value="TOrginalKey"></option>
+    <select id="KeySelector" onchange="transpose()" class="bg-cyan-800 p-2 text-center" name="Transpose">
+      <option value="orginalKey" id="orginalKeyOption"></option>
       <option value="C">C</option>
       <option value="C#">C#</option>
       <option value="D♭">D♭</option>
@@ -201,7 +201,6 @@
 
 
     // const Chord_Lines = document.getElementsByClassName("PraisePoint_Chords_Line");
-    var _currentKey ;
 
     preTranspose();
     // includes of transpose()
