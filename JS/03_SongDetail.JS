@@ -107,7 +107,7 @@ function decisionTranslatorHide() {
 
 // ```````````````````` Chords Lyrics Nav Javascript ````````````````````````
 function PraisePoint_Chords() {
-    Transpose_Controller.style.display = "flex";
+    Transpose_Controller.style.visibility = "visible";
     for (const Chord_Line of Chord_Lines) {
       Chord_Line.style.display = "flex";
     }
@@ -115,7 +115,7 @@ function PraisePoint_Chords() {
   }
   
   function PraisePoint_Lyrics() {
-    Transpose_Controller.style.display = "none";
+    Transpose_Controller.style.visibility = "hidden";
     for (const Chord_Line of Chord_Lines) {
       Chord_Line.style.display = "none";
     }
