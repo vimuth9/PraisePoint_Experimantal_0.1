@@ -122,7 +122,7 @@ function PraisePoint_Chords() {
     // console.log("Hide Chords Transpose Controlls");
   }
 
-  //``````````````````````Copy Lyrics with Chord or Lyrics only `````````
+  //``````````````````Copy Lyrics with Chord or Lyrics only ````````````
   function copyContent() {
       // Get the content of the div
       var copyText = document.getElementById("copyMe").innerText;
@@ -139,5 +139,12 @@ function PraisePoint_Chords() {
       // Remove the temporary textarea
       document.body.removeChild(tempTextArea);
       // Optionally, provide feedback to the user
-      // alert("Content copied!");
-  }
+      var copytextElement = document.getElementById("copytext");
+    copytextElement.textContent = "Copied";
+
+    // Animate the text change
+    setTimeout(function() {
+      copytextElement.textContent = "Copy";
+    }, 500);
+}
+    //``````````````````````````````````````
