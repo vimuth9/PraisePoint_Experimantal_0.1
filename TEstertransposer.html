@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tester</title>
+    <link rel="shortcut icon" href="./images/01_ favicon-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/01_style.css">
+    <link rel="stylesheet" href="./CSS/02_customStyle.css">
+    <script src="./JS/01_TransposeM.js"></script>
+    <script src="./JS/03_SongDetail.JS"></script>
+</head>
+<body>
+    <div class="overflow-hidden rounded-2xl bg-slate-500 p-0">
+        <!--Navigation for the chords/lyrics selector-->
+        <nav class="columns-3 text-center">
+          <div id="PraisePoint_ShowChords" role="button" class="font-bold hover:bg-white hover:text-slate-800" onclick="PraisePoint_Chords()">Chords</div>
+          <div id="PraisePoint_ShowLyrics" role="button" class="font-bold hover:bg-white hover:text-slate-800" onclick="PraisePoint_Lyrics()">Lyrics</div>
+          <div id="PraisePoint_ShowResources" role="button" class="font-bold hover:bg-white hover:text-slate-800 lg:hidden">Resources</div>
+        </nav>
+  
+        <!--Transposer-->
+        <div class=" Controllerbox bg-slate-600 p-5 text-white">
+          <div class="bg-slate-950" id="PraisePointTrasposeController">
+            <div style="height: auto; padding: 10px;">Transpose</div>
+            <select style="height: 50px;" id="KeySelector" onchange="transpose()" class="bg-slate-800 p-3" name="Transpose">
+              <option value="orginalKey" id="orginalKeyOption"></option>
+              <option value="C">C</option>
+              <option value="C#">C#</option>
+              <option value="D♭">D♭</option>
+              <option value="D">D</option>
+              <option value="D#">D#</option>
+              <option value="E♭">E♭</option>
+              <option value="E">E</option>
+              <option value="F">F</option>
+              <option value="F#">F#</option>
+              <option value="G♭">G♭</option>
+              <option value="G">G</option>
+              <option value="G#">G#</option>
+              <option value="A♭">A♭</option>
+              <option value="A">A</option>
+              <option value="A#">A#</option>
+              <option value="B♭">B♭</option>
+              <option value="B">B</option>
+            </select>
+          </div>
+
+
+          <!--Copy icon-->
+          <div role="button" onclick="copyContent()" id="copyChordLyrics" style="display: flex; align-items: center;">
+            <div id="copytext" class="hidden sm:flex">Copy</div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="copyicon">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184" />
+            </svg>
+
+          </div>
+        </div>
+
+
+
+        <!-- Chords and Lyrics -->
+        <div id="copyMe" class="bg-black p-3 text-white">
+          <div class="PraisePoint_Catogorie">[ Intro - Concecpt 01 Tester ]</div>
+          <div class="PraisePoint_Chords_Line">chord line Test - ABCDEFG - # ♭ - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
+          <br />
+          <div class="PraisePoint_Catogorie">[ Chorus - Transpose Tester ]</div>
+          <div class="PraisePoint_Chords_Line">chord line Test - ABCDEFG - # ♭ - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
+          <div class="PraisePoint_Lyrics_Line">Lyrics Line Test - ABCDEFG - # ♭ - abcdefg - hijklmnopqrstuvwxyz - 1234567890 - !@$%^&*()[]{};:'",.//~`</div>
+          <br />
+          <div class="PraisePoint_Catogorie">[ Verse 01 - Location Tester]</div>
+          <div class="PraisePoint_Chords_Line">'A' 'Esus' 'C#m' 'B♭'</div>
+          <div class="PraisePoint_Lyrics_Line">^ගැලවුම්කරු මිදුම්ක^රු - ^දෙවිදුන් මා එසෙව්වා^</div>
+          <div class="PraisePoint_Chords_Line">"B♭" "Fsus" "Dm" "C"</div>
+          <div class="PraisePoint_Lyrics_Line">^ගැලවුම්කරු මිදුම්ක^කරු - ^දෙවිදුන් මා එසෙව්වා^</div>
+          <div class="PraisePoint_Lyrics_Line">ප්‍රශංසාවේ දෙවිදු නමදිමු ගෞරවයෙන් යේසුස් නවතිමු නවතිමු ගෞරවයෙන්</div>
+          <br />
+        </div>
+      </div>
+
+
+
+      <script>
+        //~~~~~~~~~~~~~~~~~~~~~~~ Change acording to the song the var and let ~~~~~~~~~~~~~~~~~~~~~~~
+        // Song Name
+        //const _orginalSongName = "ගැලවුම්කරු මිදුම්කරු - දෙවිදුන් මා එසෙව්වා "; // id= orginalSongName
+        //Orginal Song Details
+        //const _orginalSongWriterName = "Hilsong - Ebenaser";     // id= orginalSongWriterName
+        const _orginalKey = "E";                      // id= orginalKey
+        //const _BPM = 120;                            // id= BPM
+        //const _oLanguage = "English";                 // id= oLanguage
+        //Translation Details
+        //const _noTranslation = false;                  // if the song is not a Translation = true , else = false   |
+        //const _translator = "Peter parker";                // id= translator                                          |
+        //const _tLanguage = "Sinhala";                 // id= tLanguage                                            |->   id = translator_details
+        // var _aLanguage = ;                       // id= aLanguage
+    
+    
+        // ```````````````` Do Not Change AnyThing Under This ``````````````````````
+        // var _themeTag = ; // id= themeTag // Use this Theme code in the Future if I'm Adding Themes for each song
+        //var translator_details = document.getElementById("translator_details"); // Transla
+        //document.getElementById("moreInfo").addEventListener("click", detailB); // Exicution of show more info about the song
+        //detailA();
+        // noTranslatoyr();  //  This part is useless if I want To hide the Information in Desktop mode
+        
+        // ```````````````````` Chords Lyrics Nav Javascript ````````````````````````
+        const Transpose_Controller = document.getElementById("PraisePointTrasposeController")
+        const Chord_Lines = document.getElementsByClassName("PraisePoint_Chords_Line");
+    </script>
+    <script>
+    // ```````````````````` Transposer Javascript ````````````````````````
+    preTranspose();
+  
+    </script>
+
+</body>
+</html>
