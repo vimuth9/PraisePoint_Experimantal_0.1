@@ -10,7 +10,7 @@
     <script src="./JS/01_TransposeM.js"></script>
     <script src="./JS/03_SongDetail.JS"></script>
 </head>
-<body>
+<body style="background-color: rgb(93, 73, 73);">
     <div class="overflow-hidden rounded-2xl bg-slate-500 p-0">
         <!--Navigation for the chords/lyrics selector-->
         <!--Transposer-->
@@ -82,6 +82,7 @@
     <script>
     // ```````````````````` Transposer Javascript ````````````````````````
     preTranspose();
+    
     var _currentKey; //current key
     var _NewKey;     // the key to be changed
     const Chord_Lines = document.getElementsByClassName("PraisePoint_Chords_Line"); //chords line to transpose
