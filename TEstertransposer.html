@@ -105,13 +105,20 @@
         // noTranslatoyr();  //  This part is useless if I want To hide the Information in Desktop mode
         
         // ```````````````````` Chords Lyrics Nav Javascript ````````````````````````
-        const Transpose_Controller = document.getElementById("PraisePointTrasposeController")
+        
+        //const Transpose_Controller = document.getElementById("PraisePointTrasposeController")
         const Chord_Lines = document.getElementsByClassName("PraisePoint_Chords_Line");
     </script>
     <script>
     // ```````````````````` Transposer Javascript ````````````````````````
     preTranspose();
-  
+
+    var _currentKey;
+    var _Key;
+
+    </script>
+    <script>//Delete this
+            document.getElementById("orginalKeyOption").innerHTML = _orginalKey + " - Orginal Key";
     </script>
 
 </body>
