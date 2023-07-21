@@ -1,10 +1,10 @@
-const keys = ['C', 'C#', 'Db', 'D', 'D#', 'Eb', 'E', 'F', 'F#', 'Gb', 'G', 'G#', 'Ab', 'A', 'A#', 'Bb', 'B'];
+const keys = ['C', 'C#', 'D♭', 'D', 'D#', 'E♭', 'E', 'F', 'F#', 'G♭', 'G', 'G#', 'A♭', 'A', 'A#', 'B♭', 'B'];
 
 function transposeChord(chord, currentKey, newKey) {
   const currentKeyIndex = keys.indexOf(currentKey);
   const newKeyIndex = keys.indexOf(newKey);
 
-  const chordParts = chord.match(/[A-G][b#]?(maj|minor|dim|aug|sus|m)?\d?(\/[A-G][b#]?)?/g);
+  const chordParts = chord.match(/[A-G][♭#]?(maj|minor|dim|aug|sus|m)?\d?(\/[A-G][b#]?)?/g);
   if (!chordParts) return chord;
 
   const transposedChords = chordParts.map(chordPart => {
