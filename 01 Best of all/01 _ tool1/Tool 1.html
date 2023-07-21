@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chord Transposer</title>
+</head>
+<body>
+  <label for="current-key-selector">Current Key:</label>
+  <select id="current-key-selector">
+    <option value="C">C</option>
+    <option value="C#">C#</option>
+    <option value="Db">Db</option>
+    <option value="D">D</option>
+    <option value="D#">D#</option>
+    <option value="Eb">Eb</option>
+    <option value="E">E</option>
+    <option value="F">F</option>
+    <option value="F#">F#</option>
+    <option value="Gb">Gb</option>
+    <option value="G">G</option>
+    <option value="G#">G#</option>
+    <option value="Ab">Ab</option>
+    <option value="A">A</option>
+    <option value="A#">A#</option>
+    <option value="Bb">Bb</option>
+    <option value="B">B</option>
+  </select>
+
+  <br>
+
+  <label for="new-key-selector">New Key:</label>
+  <select id="new-key-selector">
+    <option value="C">C</option>
+    <option value="C#">C#</option>
+    <option value="Db">Db</option>
+    <option value="D">D</option>
+    <option value="D#">D#</option>
+    <option value="Eb">Eb</option>
+    <option value="E">E</option>
+    <option value="F">F</option>
+    <option value="F#">F#</option>
+    <option value="Gb">Gb</option>
+    <option value="G">G</option>
+    <option value="G#">G#</option>
+    <option value="Ab">Ab</option>
+    <option value="A">A</option>
+    <option value="A#">A#</option>
+    <option value="Bb">Bb</option>
+    <option value="B">B</option>
+  </select>
+
+  <br>
+
+  <textarea id="chords-input" rows="10" cols="50"></textarea>
+
+  <br>
+
+  <button onclick="transposeChords()">Transpose Chords</button>
+
+  <br>
+
+  <label for="transposed-chords">Transposed Chords:</label>
+  <textarea id="transposed-chords" rows="10" cols="50" readonly></textarea>
+
+  <script src="transposer.js"></script>
+</body>
+</html>

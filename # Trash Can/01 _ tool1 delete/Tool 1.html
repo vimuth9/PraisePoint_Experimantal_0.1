@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chord Transposer</title>
+  <style></style>
+</head>
+<body>
+  <label for="current-key-selector">Current Key:</label>
+  <select id="current-key-selector">
+    <option value="C">C</option>
+    <option value="C#">C#</option>
+    <option value="D">D</option>
+    <!-- Add more options for other keys as needed -->
+  </select>
+
+  <br>
+
+  <label for="new-key-selector">New Key:</label>
+  <select id="new-key-selector">
+    <option value="C">C</option>
+    <option value="C#">C#</option>
+    <option value="D">D</option>
+    <!-- Add more options for other keys as needed -->
+  </select>
+
+  <br>
+
+  <textarea id="chords-input" rows="10" cols="50"></textarea>
+
+  <br>
+
+  <button onclick="transposeChords()">Transpose Chords</button>
+
+  <br>
+
+  <label for="transposed-chords">Transposed Chords:</label>
+  <textarea id="transposed-chords" rows="10" cols="50" readonly></textarea>
+
+  <script src="tool1transposer.js"></script>
+</body>
+</html>

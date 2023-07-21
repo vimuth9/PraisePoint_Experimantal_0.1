@@ -1,9 +1,9 @@
 function preTranspose () {
-  _currentKey = _orginalKey;
-
+  _currentKey = _orginalKey ;
+  
 }
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-function transpose () {
+function transpose() {
   
 }
 //`````````````````````````````````````````````````
