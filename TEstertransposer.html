@@ -17,8 +17,8 @@
         <div class=" Controllerbox bg-slate-600 p-5 text-white">
           <div class="bg-slate-950" id="PraisePointTrasposeController">
             <div style="height: auto; padding: 10px;">Transpose</div>
-            <select style="height: 50px;" id="KeySelector" onchange="transpose()" class="bg-slate-800 p-3" name="Transpose">
-              <option value="orginalKey" id="orginalKeyOption"></option>
+            <select style="height: 50px;" id="KeySelector" onchange="transpose(this)" class="bg-slate-800 p-3" name="Transpose">
+              <option value="orginalKey" id="orginalKeyOption" selected></option>
               <option value="C">C</option>
               <option value="C#">C#</option>
               <option value="D♭">D♭</option>
@@ -82,12 +82,14 @@
     <script>
     // ```````````````````` Transposer Javascript ````````````````````````
     preTranspose();
-    
+
     var _currentKey; //current key
-    var _NewKey;     // the key to be changed
-    const Chord_Lines = document.getElementsByClassName("PraisePoint_Chords_Line"); //chords line to transpose
+
     const keySelector = document.getElementById('KeySelector'); // key selector
-      keySelector.addEventListener( 'change' ,  transpose(this) );
+
+    const Chord_Lines = document.getElementsByClassName("PraisePoint_Chords_Line"); //chords line to transpose
+
+    keySelector.addEventListener( 'change' ,  transpose() );
 
     </script>
 
