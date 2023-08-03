@@ -200,8 +200,17 @@
     const Chord_Lines = document.getElementsByClassName("PraisePoint_Chords_Line");
 </script>
 <script>
-      // ```````````````````` Transposer Javascript ````````````````````````
+  // ```````````````````` Transposer Javascript ````````````````````````
   preTranspose();
-</script>
+
+  var _currentKey; //current key
+
+  const keySelector = document.getElementById('KeySelector'); // key selector
+
+  const Chord_Lines = document.getElementsByClassName("PraisePoint_Chords_Line"); //chords line to transpose
+
+  keySelector.addEventListener( 'change' ,  transpose() );
+  </script>
+
 </body>
 </html>

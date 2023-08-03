@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+/* Style the chords */
+.chord {
+  font-weight: bold;
+  color: #333; /* Adjust the color as per your preference */
+  display: block;
+}
+
+/* Style the lyrics container */
+.lyrics {
+  /* Add any necessary styling for the lyrics */
+  /* For example, you can adjust the font size, color, etc. */
+  font-size: 16px;
+  color: #555;
+  /* Add any necessary positioning and spacing to align the lyrics with the chords */
+  /* For example, you can use padding, margin, etc. */
+  margin-top: 1em;
+}
+</style>
+
+</head>
+<body>
+    
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chord Repositioning</title>
+</head>
+<body>
+    <div class="chords">
+        <span class="chord">B♭</span>
+        <span class="chord">Fsus</span>
+        <span class="chord">Dm</span>
+        <span class="chord">C</span>
+      </div>
+      <div class="lyrics">^ගැලවුම්කරු මිදුම්ක^කරු - ^දෙවිදුන් මා එසෙව්වා^</div>
+        <!-- 
+      <script>
+        const lyricsElement = document.querySelector('.lyrics');
+        const lyricsText = lyricsElement.textContent;
+        
+        const chordsAndLyrics = lyricsText.split('^').filter(item => item.trim() !== '');
+        const chords = chordsAndLyrics[0].trim().split(' ');
+        const lyrics = chordsAndLyrics[1].trim().split(' ');
+        
+        let chordsHTML = '';
+        for (let i = 0; i < lyrics.length; i++) {
+          chordsHTML += `<span class="chord">${chords[i]}</span> ${lyrics[i]} `;
+        }
+        
+        lyricsElement.innerHTML = chordsHTML;
+        </script>-->
+        
+        <script>
+            const lyricsElement = document.querySelector('.lyrics');
+            const lyricsText = lyricsElement.textContent;
+            
+            const chordsAndLyrics = lyricsText.split('^').filter(item => item.trim() !== '');
+            const chords = chordsAndLyrics[0].trim().split(' ');
+            const lyrics = chordsAndLyrics[1].trim().split(' ');
+            
+            let chordsHTML = '';
+            for (let i = 0; i < lyrics.length; i++) {
+              chordsHTML += `<span class="chord">${chords[i] || ''}</span>`;
+              chordsHTML += lyrics[i] + ' ';
+            }
+            
+            lyricsElement.innerHTML = chordsHTML;
+            </script>
+                        
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
