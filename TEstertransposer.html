@@ -77,19 +77,17 @@
     <script> //Delete this
       const _orginalKey = "E" ;                      // id= orginalKey
       document.getElementById("orginalKeyOption").innerHTML = _orginalKey + " - Orginal Key";
+      const Chord_Lines = document.getElementsByClassName("PraisePoint_Chords_Line"); //chords line to transpose
+
     </script>
 
     <script>
     // ```````````````````` Transposer Javascript ````````````````````````
     preTranspose();
-
     var _currentKey; //current key
-
     const keySelector = document.getElementById('KeySelector'); // key selector
-
-    const Chord_Lines = document.getElementsByClassName("PraisePoint_Chords_Line"); //chords line to transpose
-
     keySelector.addEventListener( 'change' ,  transpose() );
+    
     </script>
 
 </body>
