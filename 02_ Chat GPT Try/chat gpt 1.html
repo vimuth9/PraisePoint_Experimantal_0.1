@@ -3,81 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<style>
-/* Style the chords */
-.chord {
-  font-weight: bold;
-  color: #333; /* Adjust the color as per your preference */
-  display: block;
-}
-
-/* Style the lyrics container */
-.lyrics {
-  /* Add any necessary styling for the lyrics */
-  /* For example, you can adjust the font size, color, etc. */
-  font-size: 16px;
-  color: #555;
-  /* Add any necessary positioning and spacing to align the lyrics with the chords */
-  /* For example, you can use padding, margin, etc. */
-  margin-top: 1em;
-}
-</style>
-
+    <title>chat gpt 1</title>
 </head>
 <body>
-    
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Chord Repositioning</title>
-</head>
-<body>
-    <div class="chords">
-        <span class="chord">B♭</span>
-        <span class="chord">Fsus</span>
-        <span class="chord">Dm</span>
-        <span class="chord">C</span>
-      </div>
-      <div class="lyrics">^ගැලවුම්කරු මිදුම්ක^කරු - ^දෙවිදුන් මා එසෙව්වා^</div>
-        <!-- 
-      <script>
-        const lyricsElement = document.querySelector('.lyrics');
-        const lyricsText = lyricsElement.textContent;
-        
-        const chordsAndLyrics = lyricsText.split('^').filter(item => item.trim() !== '');
-        const chords = chordsAndLyrics[0].trim().split(' ');
-        const lyrics = chordsAndLyrics[1].trim().split(' ');
-        
-        let chordsHTML = '';
-        for (let i = 0; i < lyrics.length; i++) {
-          chordsHTML += `<span class="chord">${chords[i]}</span> ${lyrics[i]} `;
+
+<select id="replacementOptions">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+    <option value="option4">Option 4</option>
+</select>
+
+<div class="Paragraph">This is a sample paragraph containing some words.</div>
+<div class="Paragraph">Another sample paragraph for testing.</div>
+<div class="Paragraph">One more paragraph with words to be replaced.</div>
+  
+
+<script>
+
+    // Object with letter replacements for each option
+let letterReplacementsOption1 = {};
+let letterReplacementsOption2 = {
+    "e": "y",
+    "s": "p"
+};
+let letterReplacementsOption3 = {
+    "i": "w",
+    "t": "q"
+};
+let letterReplacementsOption4 = {
+    "u": "v",
+    "n": "m"
+};
+
+// Get the select element
+let selectElement = document.getElementById('replacementOptions');
+
+// Get all elements with class "Paragraph"
+let paragraphs = document.querySelectorAll('.Paragraph');
+
+// Create a copy of the original paragraphs' text
+let originalParagraphsText = [];
+paragraphs.forEach(paragraph => {
+    originalParagraphsText.push(paragraph.textContent);
+});
+
+// Add event listener for select change
+selectElement.addEventListener('change', function() {
+    let selectedValue = this.value;
+    let letterReplacements;
+
+    switch (selectedValue) {
+        case 'option1':
+            letterReplacements = letterReplacementsOption1;
+            break;
+        case 'option2':
+            letterReplacements = letterReplacementsOption2;
+            break;
+        case 'option3':
+            letterReplacements = letterReplacementsOption3;
+            break;
+        case 'option4':
+            letterReplacements = letterReplacementsOption4;
+            break;
+        default:
+            letterReplacements = {};
+    }
+
+    // Iterate through each paragraph
+    paragraphs.forEach((paragraph, index) => {
+        // Get the text content of the paragraph
+        let paragraphText;
+
+        // Use the original text if Option 1 is selected
+        if (selectedValue === 'option1') {
+            paragraphText = originalParagraphsText[index];
+        } else {
+            paragraphText = paragraph.textContent;
         }
-        
-        lyricsElement.innerHTML = chordsHTML;
-        </script>-->
-        
-        <script>
-            const lyricsElement = document.querySelector('.lyrics');
-            const lyricsText = lyricsElement.textContent;
-            
-            const chordsAndLyrics = lyricsText.split('^').filter(item => item.trim() !== '');
-            const chords = chordsAndLyrics[0].trim().split(' ');
-            const lyrics = chordsAndLyrics[1].trim().split(' ');
-            
-            let chordsHTML = '';
-            for (let i = 0; i < lyrics.length; i++) {
-              chordsHTML += `<span class="chord">${chords[i] || ''}</span>`;
-              chordsHTML += lyrics[i] + ' ';
+
+        // Convert the paragraph text into an array of words
+        let words = paragraphText.split(" ");
+
+        // Iterate through the array of words and perform letter replacements
+        for (let i = 0; i < words.length; i++) {
+            let word = words[i];
+            let newWord = "";
+
+            // Iterate through each letter in the word
+            for (let j = 0; j < word.length; j++) {
+                let letter = word[j];
+                if (letterReplacements[letter]) {
+                    newWord += letterReplacements[letter];
+                } else {
+                    newWord += letter;
+                }
             }
-            
-            lyricsElement.innerHTML = chordsHTML;
-            </script>
-                        
-    </body>
+
+            words[i] = newWord;
+        }
+
+        // Convert the array of words back to a paragraph
+        let newParagraph = words.join(" ");
+
+        // Set the updated text content back to the paragraph
+        paragraph.textContent = newParagraph;
+    });
+});
+
+</script>
+
+</body>
 </html>
-
-
 
 
 

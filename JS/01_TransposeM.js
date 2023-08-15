@@ -10,12 +10,7 @@ function transpose() {
   console.log("_NewKey is = " + _NewKey);
   console.log(" ~~~ Transposing starts from here ~~~ ");
   // Start of transposing  
-               // Inputs for the transposing are = _NewKey , _currentKey
-  var chordLinesEdit = document.querySelector(".PraisePoint_Chords_Line").innerText;
-  var tempChordsArea = document.createElement("textarea");
-  tempChordsArea.value = chordLinesEdit;
-  document.body.appendChild(tempChordsArea);
-  //chat gpt
+               // # Inputs for the transposing ->  _NewKey , _currentKey
 
 
 
@@ -517,12 +512,7 @@ function keyChordNumber2() {
     "11": "A",
     "12": "A#",
   };
-
 }
-
-// Example usage:
-const keyOfE = keyChordNumber2("E");
-const noteInE = keyOfE["1"]; // This will give you "E"
 
 function numberToChord() {
   

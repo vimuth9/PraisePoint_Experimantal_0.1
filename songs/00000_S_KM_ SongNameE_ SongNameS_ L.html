@@ -107,7 +107,7 @@
         <!--Transposer-->
         <div class=" Controllerbox bg-slate-600 p-5 text-white">
           <div class="bg-slate-950" id="PraisePointTrasposeController">
-            <div style="height: auto; padding: 10px;">Transpose</div>
+            <label style="height: auto; padding: 10px;">Transpose</label>
             <select style="height: 50px;" id="KeySelector" onchange="transpose()" class="bg-slate-800 p-3" name="Transpose">
               <option value="orginalKey" id="orginalKeyOption"></option>
               <option value="C">C</option>
@@ -209,7 +209,6 @@
   const keySelector = document.getElementById('KeySelector'); // key selector
 
 
-  keySelector.addEventListener( 'change' ,  transpose() );
   </script>
 
 </body>

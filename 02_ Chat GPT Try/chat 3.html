@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat 3</title>
+</head>
+<body>
+    <div>
+        <label for="currentOption">Choose the current option:</label>
+        <select id="currentOption">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+            <option value="option4">Option 4</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="newOption">Choose the new option:</label>
+        <select id="newOption">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+            <option value="option4">Option 4</option>
+        </select>
+    </div>
+
+    <div class="Paragraph">C D E F G A B C</div>
+    <div class="Paragraph">D Emin7 F C G A B</div>
+    <div class="Paragraph">D E F C Gsus A Bm</div>
+
+    <script>
+
+const keys = {
+    "option1": {
+      "1": "C",
+      "2": "C#",
+      "3": "D",
+      "4": "D#",
+      "5": "E",
+      "6": "F",
+      "7": "F#",
+      "8": "G",
+      "9": "G#",
+      "10": "A",
+      "11": "A#",
+      "12": "B",
+    },
+    "option2": {
+      "1": "C#",
+      "2": "D",
+      "3": "D#",
+      "4": "E",
+      "5": "F",
+      "6": "F#",
+      "7": "G",
+      "8": "G#",
+      "9": "A",
+      "10": "A#",
+      "11": "B",
+      "12": "C",
+    },
+    "option3": {
+      "1": "D♭",
+      "2": "E♭",
+      "3": "E",
+      "4": "F",
+      "5": "G♭",
+      "6": "G",
+      "7": "A♭",
+      "8": "A",
+      "9": "B♭",
+      "10": "B",
+      "11": "C",
+      "12": "D♭"
+    },
+    "option4": {
+      "1": "D",
+      "2": "D#",
+      "3": "E",
+      "4": "F",
+      "5": "F#",
+      "6": "G",
+      "7": "G#",
+      "8": "A",
+      "9": "A#",
+      "10": "B",
+      "11": "C",
+      "12": "C#"
+    }
+};
+
+
+
+
+
+// Function to replace letters according to the process
+        function replaceLetters(text, fromOption, toOption) {
+            let result = '';
+
+            for (let i = 0; i < text.length; i++) {
+                let letter = text[i];
+                let currentOptionNumber = Object.keys(keys[fromOption]).find(key => keys[fromOption][key] === letter);
+
+                if (currentOptionNumber) {
+                    let newLetter = keys[toOption][currentOptionNumber];
+                    result += newLetter;
+                } else {
+                    result += letter;
+                }
+            }
+
+            return result;
+        }
+
+        // Get all elements with class "Paragraph"
+        const paragraphs = document.querySelectorAll('.Paragraph');
+
+        // Listen for changes in the select elements
+        document.getElementById('currentOption').addEventListener('change', updateText);
+        document.getElementById('newOption').addEventListener('change', updateText);
+
+        function updateText() {
+            const currentOption = document.getElementById('currentOption').value;
+            const newOption = document.getElementById('newOption').value;
+
+            paragraphs.forEach(paragraph => {
+                let paragraphText = paragraph.textContent;
+                let words = paragraphText.split(" ");
+
+                for (let i = 0; i < words.length; i++) {
+                    let word = words[i];
+                    words[i] = replaceLetters(word, currentOption, newOption);
+                }
+
+                let newParagraph = words.join(" ");
+                paragraph.textContent = newParagraph;
+            });
+        }
+    </script>
+</body>
+</html>
