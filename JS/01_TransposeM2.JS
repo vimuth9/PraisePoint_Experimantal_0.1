@@ -3,7 +3,6 @@ function preTranspose () {
   
 }
 
-
 function beforeTransposing() {
   //console.log(" ``` _currentKey stays as this during the transposing cycle = " + _currentKey);
   const keySelectorValue = keySelector.value;   // the key to be changed
@@ -18,7 +17,22 @@ function toWhichKey(keySelectorValue) {
     _NewKey = keySelector.value;
   } 
 }
+function afterTranspose() {
+  console.log(" ~~~ Transposing finished ~~~ ");
+  _currentKey = _NewKey ;
+delete replacementsArr;
+delete newPraisePoint_Chords_Line;
+}
+
+function transpose() {
+  
+  beforeTransposing();
+  replacing();
+  afterTranspose();
+}
+
 function replacing() {
+  // Creating the replacementArr
   const keys = {
     "C": {
       "1": "C",
@@ -262,82 +276,23 @@ function replacing() {
   const replacementsArr = {};
   const currentKeyProperty = Object.values(keys[_currentKey]);
   const newKeyValue = Object.values(keys[_NewKey]);
-currentKeyProperty.forEach((value, index) => {
-  replacementsArr[value] = newKeyValue[index];
-});
-  
-  const mergedChars = ['#', '♭'];
-  let ChordLines = document.querySelectorAll('.PraisePoint_Chords_Line');
-
-  // ````````````````````````````` Need work from here ````````````````````
-  // Iterate through each ChordLine
-
-  ChordLines.forEach(ChordLine => {
-    let ChordLineText = ChordLine.textContent;
-      // Convert the ChordLine text into an array of words
-    let words = ChordLineText.split('');
-      
-      function combineMergedChars(word) {
-        for (const mergedChar of mergedChars) {
-          if (word.includes(mergedChar)) {
-            const index = word.indexOf(mergedChar);
-            const letterx = word.substring(0, index);
-            const combined = letterx + mergedChar;
-
-            return combined;
-          }
-        }
-        return word;
-      }
-      
-      // Process each word and combine merged characters
-      for (let i = 0; i < words.length; i++) {
-        words[i] = combineMergedChars(words[i]);
-      }
-      
-      // Join the processed words back into a string
-
-      // Iterate through the array of words and perform letter replacements
-      for (let i = 0; i < words.length; i++) {
-          let word = words[i];
-          let newWord = "";
-  
-          // Iterate through each letter in the word
-          for (let j = 0; j < word.length; j++) {
-            let letter = word[j].toUpperCase();
-              if (replacementsArr[letter]) {
-                  newWord += replacementsArr[letter];
-              } else {
-                  newWord += word[j]; // Keep the original character if not found in replacements
-              }
-          }
-  
-          words[i] = newWord;
-      }
-  
-      // Convert the array of words back to a ChordLine
-      let newPraisePoint_Chords_Line = words.join("");
-  
-      // Set the updated text content back to the ChordLine
-      ChordLine.textContent = newPraisePoint_Chords_Line;
-      console.log(newPraisePoint_Chords_Line)
+  currentKeyProperty.forEach((value, index) => {
+    replacementsArr[value] = newKeyValue[index];
   });
-
-
-}
-function afterTranspose() {
-    //after transposing is finised
-    console.log(" ~~~ Transposing finished ~~~ ");
-    _currentKey = _NewKey ;
-  delete replacementsArr;
-  delete newPraisePoint_Chords_Line ;
-}
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-function transpose() {
+  // spliting and merging # and ♭ characters
+  const mergedChars = ['#', '♭'];
   
-  beforeTransposing();
-  replacing();
-  afterTranspose();
+  /* ~~~~~~~~~~~~~~~~~~~~~
+  
+  1. read the chords lines
+  2. for each line split to to leters
+  3. if thers a merge character join with the item before the merge characters
+  4. replace the letters inside the new array
+  5. replace the Chord line
+  
+  ~~~~~~~~~~~~~~~~~~~~~*/
+  let ChordLines = document.querySelectorAll('.PraisePoint_Chords_Line');
+  ChordLines.forEach(ChordLine => {
+    
+  })
 }
-
