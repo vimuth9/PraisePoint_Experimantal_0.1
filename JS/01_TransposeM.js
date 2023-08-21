@@ -19,70 +19,7 @@ function toWhichKey(keySelectorValue) {
   } 
 }
 function replacing() {
-  const replacementsArr = {};
-  const currentKeyProperty = Object.values(keys[_currentKey]);
-  const newKeyValue = Object.values(keys[_NewKey]);
-currentKeyProperty.forEach((value, index) => {
-  replacementsArr[value] = newKeyValue[index];
-});
-  
-  const mergedChars = ['#', '♭'];
-  let ChordLines = document.querySelectorAll('.PraisePoint_Chords_Line');
-
-  // ````````````````````````````` Need work from here ````````````````````
-  // Iterate through each ChordLine
-
-  ChordLines.forEach(ChordLine => {
-    let ChordLineText = ChordLine.textContent;
-      // Convert the ChordLine text into an array of words
-    let words = ChordLineText.split('');
-      
-      function combineMergedChars(word) {
-        for (const mergedChar of mergedChars) {
-          if (word.includes(mergedChar)) {
-            const index = word.indexOf(mergedChar);
-            const letterx = word.substring(0, index);
-            const combined = letterx + mergedChar;
-
-            return combined;
-          }
-        }
-        return word;
-      }
-      
-      // Process each word and combine merged characters
-      for (let i = 0; i < words.length; i++) {
-        words[i] = combineMergedChars(words[i]);
-      }
-      
-      // Join the processed words back into a string
-
-      // Iterate through the array of words and perform letter replacements
-      for (let i = 0; i < words.length; i++) {
-          let word = words[i];
-          let newWord = "";
-  
-          // Iterate through each letter in the word
-          for (let j = 0; j < word.length; j++) {
-            let letter = word[j].toUpperCase();
-              if (replacementsArr[letter]) {
-                  newWord += replacementsArr[letter];
-              } else {
-                  newWord += word[j]; // Keep the original character if not found in replacements
-              }
-          }
-  
-          words[i] = newWord;
-      }
-  
-      // Convert the array of words back to a ChordLine
-      let newPraisePoint_Chords_Line = words.join("");
-  
-      // Set the updated text content back to the ChordLine
-      ChordLine.textContent = newPraisePoint_Chords_Line;
-    console.log(newPraisePoint_Chords_Line)
-    
-    const keys = {
+  const keys = {
     "C": {
       "1": "C",
       "2": "C#",
@@ -322,6 +259,70 @@ currentKeyProperty.forEach((value, index) => {
       "12": "A#",
     },
   };
+
+  const replacementsArr = {};
+  const currentKeyProperty = Object.values(keys[_currentKey]);
+  const newKeyValue = Object.values(keys[_NewKey]);
+currentKeyProperty.forEach((value, index) => {
+  replacementsArr[value] = newKeyValue[index];
+});
+  
+  const mergedChars = ['#', '♭'];
+  let ChordLines = document.querySelectorAll('.PraisePoint_Chords_Line');
+
+  // ````````````````````````````` Need work from here ````````````````````
+  // Iterate through each ChordLine
+
+  ChordLines.forEach(ChordLine => {
+    let ChordLineText = ChordLine.textContent;
+      // Convert the ChordLine text into an array of words
+    let words = ChordLineText.split('');
+      
+      function combineMergedChars(word) {
+        for (const mergedChar of mergedChars) {
+          if (word.includes(mergedChar)) {
+            const index = word.indexOf(mergedChar);
+            const letterx = word.substring(0, index);
+            const combined = letterx + mergedChar;
+
+            return combined;
+          }
+        }
+        return word;
+      }
+      
+      // Process each word and combine merged characters
+      for (let i = 0; i < words.length; i++) {
+        words[i] = combineMergedChars(words[i]);
+      }
+      
+      // Join the processed words back into a string
+
+      // Iterate through the array of words and perform letter replacements
+      for (let i = 0; i < words.length; i++) {
+          let word = words[i];
+          let newWord = "";
+  
+          // Iterate through each letter in the word
+          for (let j = 0; j < word.length; j++) {
+            let letter = word[j].toUpperCase();
+              if (replacementsArr[letter]) {
+                  newWord += replacementsArr[letter];
+              } else {
+                  newWord += word[j]; // Keep the original character if not found in replacements
+              }
+          }
+  
+          words[i] = newWord;
+      }
+  
+      // Convert the array of words back to a ChordLine
+      let newPraisePoint_Chords_Line = words.join("");
+  
+      // Set the updated text content back to the ChordLine
+      ChordLine.textContent = newPraisePoint_Chords_Line;
+    console.log(newPraisePoint_Chords_Line)
+    
 
   });
 
