@@ -4,24 +4,26 @@ function preTranspose () {
 }
 
 
-function toWhichKey(keySelectorValue) {
-  if (keySelectorValue === "orginalKey") {
-    _NewKey = _orginalKey;
-  } else {
-    _NewKey = keySelector.value;
-  } 
-}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function transpose() {
   
   beforeTransposing();
   function beforeTransposing() {
-    //console.log(" ``` _currentKey stays as this during the transposing cycle = " + _currentKey);
+    console.log(" ``` _currentKey stays as this during the transposing cycle = " + _currentKey);
     const keySelectorValue = keySelector.value;   // the key to be changed
     toWhichKey(keySelectorValue);
-    //console.log("_NewKey is = " + _NewKey);
-    //console.log(" ~~~ Transposing starts from here ~~~ ");
+
+    function toWhichKey(keySelectorValue) {
+      if (keySelectorValue === "orginalKey") {
+        _NewKey = _orginalKey;
+      } else {
+        _NewKey = keySelector.value;
+      } 
+    }
+    
+    console.log("_NewKey is = " + _NewKey);
+    console.log(" ~~~ Transposing starts from here ~~~ ");
   }
   
   replacing();
@@ -277,22 +279,29 @@ function transpose() {
     
     const mergedChars = ['#', '♭'];
     let ChordLines = document.querySelectorAll('.cl');
-  
+    let cLFArray = [];
     // ````````````````````````````` Need work from here ````````````````````
-    // Iterate through each ChordLine
-  
+    ChordLines.forEach(ChordGroup=>{
+    let ChordGroupText = ChordGroup.textContent;
+    let cLArray = ChordGroupText.split("");
+    
+  })
 
+    /*
+    1. spliting every character to a array called "cLArray"
+    2. read each array values and if thers a merge character cLArray[i-1]+cLArray[i] remove/delete read cLArray[i] again 
+    3. create a new array "cLFArray" withtha charactersfrom the step 2
+    4. read and replace characters from "cLFArray" with the help of "replacementsArr"
+    5. 
+    */
+  
   }
   
   afterTranspose();
   function afterTranspose() {
-    //after transposing is finised
     console.log(" ~~~ Transposing finished ~~~ ");
-    
     _currentKey = _NewKey ;
-  delete replacementsArr;
-  delete newPraisePoint_Chords_Line ;
-}
+  }
 
 }
 

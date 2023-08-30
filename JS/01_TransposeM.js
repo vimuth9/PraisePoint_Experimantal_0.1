@@ -288,11 +288,10 @@ function transpose() {
         
         function combineMergedChars(word) {
           for (const mergedChar of mergedChars) {
-            if (word.includes(mergedChar)) {
+            if (word.include(mergedChar)) {
               const index = word.indexOf(mergedChar);
               const letterx = word.substring(0, index);
               const combined = letterx + mergedChar;
-              delete(word.indexOf(mergedChar));
               return combined;
             }
           }
@@ -329,7 +328,6 @@ function transpose() {
     
         // Set the updated text content back to the ChordLine
         ChordLine.textContent = newPraisePoint_Chords_Line;
-      console.log(newPraisePoint_Chords_Line)
       
   
     });
