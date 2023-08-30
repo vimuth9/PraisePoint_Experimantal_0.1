@@ -292,7 +292,7 @@ function transpose() {
               const index = word.indexOf(mergedChar);
               const letterx = word.substring(0, index);
               const combined = letterx + mergedChar;
-  
+              delete(word.indexOf(mergedChar));
               return combined;
             }
           }
